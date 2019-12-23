@@ -1,0 +1,56 @@
+{
+  "groups": [{
+    "name": "file.rabbitmq",
+    "type": "com.framework.webClient.dispatch.up.MQConn",
+    "sourceType": "com.framework.webClient.dispatch.up.RabbitConfig",
+    "sourceMethod": "public com.framework.webClient.dispatch.up.MQConn fileWorkRabbitFactory() "
+  }],
+  "properties": [
+    {
+      "name": "file.rabbitmq.cache-mode",
+      "type": "org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CacheMode",
+      "sourceType": "com.framework.webClient.dispatch.up.MQConn"
+    },
+    {
+      "name": "file.rabbitmq.channel-cache-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.framework.webClient.dispatch.up.MQConn"
+    },
+    {
+      "name": "file.rabbitmq.channel-checkout-timeout",
+      "type": "java.lang.Long",
+      "sourceType": "com.framework.webClient.dispatch.up.MQConn"
+    },
+    {
+      "name": "file.rabbitmq.connection-timeout",
+      "type": "java.lang.Long",
+      "sourceType": "com.framework.webClient.dispatch.up.MQConn"
+    },
+    {
+      "name": "file.rabbitmq.host",
+      "type": "java.lang.String",
+      "sourceType": "com.framework.webClient.dispatch.up.MQConn"
+    },
+    {
+      "name": "file.rabbitmq.mqname",
+      "type": "java.lang.String",
+      "sourceType": "com.framework.webClient.dispatch.up.MQConn"
+    },
+    {
+      "name": "file.rabbitmq.password",
+      "type": "java.lang.String",
+      "sourceType": "com.framework.webClient.dispatch.up.MQConn"
+    },
+    {
+      "name": "file.rabbitmq.port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.framework.webClient.dispatch.up.MQConn"
+    },
+    {
+      "name": "file.rabbitmq.username",
+      "type": "java.lang.String",
+      "sourceType": "com.framework.webClient.dispatch.up.MQConn"
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,1 @@
+package com.framework.webClient.service;/** * @author 吉庆 * @date Fri Aug 31 00:00:00 CST 2018 */import java.util.Map;public interface ILedParaManageService {	public Map<String, Object> selectLedParaInfo(Map<String, Object> paramMap);		public int updateLedParaByLedid(Map<String, Object> paramMap);}

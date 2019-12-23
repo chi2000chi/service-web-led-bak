@@ -1,0 +1,462 @@
+2019-08-07 16:13:49,857 INFO (StartupInfoLogger.java:48)- Starting Application on maogeer-PC with PID 8664 (E:\myspace8\service-web-led\target\classes started by maogeer in E:\myspace8\service-web-led)
+2019-08-07 16:13:49,861 INFO (SpringApplication.java:661)- No active profile set, falling back to default profiles: default
+2019-08-07 16:13:49,975 INFO (Version.java:30)- HV000001: Hibernate Validator 5.2.4.Final
+2019-08-07 16:13:50,069 INFO (AbstractApplicationContext.java:582)- Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c6b992b: startup date [Wed Aug 07 16:13:50 CST 2019]; root of context hierarchy
+2019-08-07 16:13:52,106 WARN (ClassPathMapperScanner.java:167)- No MyBatis mapper was found in '[com.framework.dao]' package. Please check your configuration.
+2019-08-07 16:13:52,420 INFO (RepositoryConfigurationDelegate.java:170)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-07 16:13:52,818 INFO (RepositoryConfigurationDelegate.java:170)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-07 16:13:53,458 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [class org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$9d639748] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:13:53,489 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [class org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$200a0f38] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:13:53,496 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d6f7d91a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:13:53,533 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$147dd3dc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:13:53,622 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [class org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:13:53,631 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers' of type [class org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:13:53,634 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration' of type [class org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration$$EnhancerBySpringCGLIB$$c50f7036] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:13:53,640 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConfiguration' of type [class org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConfiguration$$EnhancerBySpringCGLIB$$1c9a5ea7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:13:53,653 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [class org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:13:53,659 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConnectionConfiguration' of type [class org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConnectionConfiguration$$EnhancerBySpringCGLIB$$6af20029] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:13:53,687 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'redisConnectionFactory' of type [class org.springframework.data.redis.connection.jedis.JedisConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:13:53,706 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'redisTemplate' of type [class org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:13:53,717 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'cacheManager' of type [class org.springframework.data.redis.cache.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:13:53,719 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'cacheAutoConfigurationValidator' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:13:54,036 INFO (TomcatEmbeddedServletContainer.java:87)- Tomcat initialized with port(s): 8080 (http)
+2019-08-07 16:13:54,045 INFO (DirectJDKLog.java:179)- Starting service Tomcat
+2019-08-07 16:13:54,045 INFO (DirectJDKLog.java:179)- Starting Servlet Engine: Apache Tomcat/8.5.6
+2019-08-07 16:13:54,108 INFO (DirectJDKLog.java:179)- Initializing Spring embedded WebApplicationContext
+2019-08-07 16:13:54,108 INFO (EmbeddedWebApplicationContext.java:276)- Root WebApplicationContext: initialization completed in 4039 ms
+2019-08-07 16:13:54,368 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'metricsFilter' to: [/*]
+2019-08-07 16:13:54,368 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-07 16:13:54,369 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-08-07 16:13:54,369 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-08-07 16:13:54,369 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'requestContextFilter' to: [/*]
+2019-08-07 16:13:54,369 INFO (AbstractFilterRegistrationBean.java:271)- Mapping filter: 'SSOAuth' to urls: [/*, /logout]
+2019-08-07 16:13:54,370 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2019-08-07 16:13:54,370 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'applicationContextIdFilter' to: [/*]
+2019-08-07 16:13:54,370 INFO (ServletRegistrationBean.java:190)- Mapping servlet: 'dispatcherServlet' to [/]
+2019-08-07 16:13:54,456 INFO (LedMsgProcessService.java:99)- ----------LedMsgProcessService Initializing ----------------
+2019-08-07 16:13:54,464 INFO (MsgEncoder.java:38)- ----------MsgEncoder Initializing ----------------
+2019-08-07 16:13:54,468 INFO (BitOperator.java:14)- ----------BitOperator Initializing ----------------
+2019-08-07 16:13:54,477 INFO (BCDOperater.java:12)- ----------BCDOperater Initializing ----------------
+2019-08-07 16:13:54,935 INFO (LedDownSender.java:53)- ----------LedDownSender Initializing ----------------
+2019-08-07 16:13:55,519 ERROR (RedisPool.java:100)- init param error!
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:542)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.framework.redis.RedisPool.initParam(RedisPool.java:68)
+	at com.framework.redis.RedisPool$$EnhancerBySpringCGLIB$$49db33a6.CGLIB$initParam$0(<generated>)
+	at com.framework.redis.RedisPool$$EnhancerBySpringCGLIB$$49db33a6$$FastClassBySpringCGLIB$$caac0e6a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at com.framework.redis.RedisPool$$EnhancerBySpringCGLIB$$49db33a6.initParam(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1128)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1022)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at com.framework.Application.main(Application.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2019-08-07 16:13:55,856 INFO (RequestMappingHandlerAdapter.java:534)- Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c6b992b: startup date [Wed Aug 07 16:13:50 CST 2019]; root of context hierarchy
+2019-08-07 16:13:55,905 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectZdxx],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.CommonController.selectZdxx(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,907 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectXlxx],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.CommonController.selectXlxx(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,909 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedCsszbByMbinfo],methods=[POST]}" onto public java.util.List<com.framework.webClient.entity.LedCsszb> com.framework.webClient.controller.LedCsszbController.selectLedCsszbByMbinfo(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,910 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/deleteLedCsszbById],methods=[POST]}" onto public int com.framework.webClient.controller.LedCsszbController.deleteLedCsszbById(java.lang.String)
+2019-08-07 16:13:55,910 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/LedCsszb],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.framework.webClient.controller.LedCsszbController.ledContentManage()
+2019-08-07 16:13:55,910 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/insertLedCsszb],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedCsszbController.insertLedCsszb(com.framework.webClient.entity.LedCsszb,javax.servlet.http.HttpSession)
+2019-08-07 16:13:55,913 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectCsmbCombox],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedCsszbController.selectCsmbCombox()
+2019-08-07 16:13:55,913 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectSystemPara],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedCsszbController.selectSystemPara()
+2019-08-07 16:13:55,913 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/updateSystemPara],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedCsszbController.updateSystemPara(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,915 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/updateLedCsszbById],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedCsszbController.updateLedCsszbById(com.framework.webClient.entity.LedCsszb,javax.servlet.http.HttpSession)
+2019-08-07 16:13:55,918 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ledlist],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.framework.webClient.controller.LedListController.ledList()
+2019-08-07 16:13:55,919 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedParaInfo],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedListController.selectLedParaInfo(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,919 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/saveOrSaveSendLedPara],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedListController.saveOrSaveSendLedPara(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,919 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ledlistadd],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.framework.webClient.controller.LedListController.ledListAdd()
+2019-08-07 16:13:55,920 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedList],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedListController.selectLedList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,920 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedListAdd],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedListController.selectLedListAdd(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,921 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/saveLedList],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedListController.saveLedList(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpSession)
+2019-08-07 16:13:55,921 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/delLedList],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedListController.delLedList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,921 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/importLedExcel],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedListController.importLedExcel(javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpSession)
+2019-08-07 16:13:55,921 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/downErrorFile]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.FileSystemResource> com.framework.webClient.controller.LedListController.downErrorFile(javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2019-08-07 16:13:55,922 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/getSystemMenuTrees],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedMenuController.getSystemMenuTrees(javax.servlet.http.HttpSession)
+2019-08-07 16:13:55,922 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/],methods=[GET || POST]}" onto public org.springframework.web.servlet.ModelAndView com.framework.webClient.controller.LedMenuController.ledmanage(javax.servlet.http.HttpSession)
+2019-08-07 16:13:55,923 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedMsg0906Byledno],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedMsgController.selectLedMsg0906Byledno(java.lang.String)
+2019-08-07 16:13:55,926 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedSjzdByPzdbm],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedSjzdController.selectLedSjzdByPzdbm(java.lang.String)
+2019-08-07 16:13:55,927 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedSjzdByPzdbmList],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedSjzdController.selectLedSjzdByPzdbmList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,930 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedStateInfo],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedStateController.selectLedStateInfo(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,930 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/exportledstate],methods=[GET]}" onto public void com.framework.webClient.controller.LedStateController.exportLedStateExcel(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpServletResponse)
+2019-08-07 16:13:55,931 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ledstate]}" onto public org.springframework.web.servlet.ModelAndView com.framework.webClient.controller.LedStateController.ledstate()
+2019-08-07 16:13:55,932 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedStateMonitor],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedStateMonitorController.selectLedStateMonitor(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,933 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ledstatemonitor]}" onto public org.springframework.web.servlet.ModelAndView com.framework.webClient.controller.LedStateMonitorController.ledstatemonitor()
+2019-08-07 16:13:55,935 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ledtemplate],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.framework.webClient.controller.LedTemplateController.ledContentManage()
+2019-08-07 16:13:55,935 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedTemplateByInfo],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedTemplateController.selectLedTemplateByInfo(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,936 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectQyszByMbidAndFqlx],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateController.selectQyszByMbidAndFqlx(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,936 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/deleteLedTemplateById],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateController.deleteLedTemplateById(java.lang.String)
+2019-08-07 16:13:55,937 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectTemplateList],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedTemplateController.selectTemplateList()
+2019-08-07 16:13:55,937 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/saveFpzpToLedTempRel],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateController.saveFpzpToLedTempRel(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,937 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/saveMbinfo],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateController.saveMbinfo(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpSession)
+2019-08-07 16:13:55,938 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/uploadToFtp],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.String> com.framework.webClient.controller.LedTemplateController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2019-08-07 16:13:55,938 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectFpzpList],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateController.selectFpzpList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,941 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedTemplateTempByInfo],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedTemplateTempController.selectLedTemplateTempByInfo(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,945 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectGgszByMbidAndFqlx],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateTempController.selectGgszByMbidAndFqlx(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,945 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ledtemplatetemp]}" onto public org.springframework.web.servlet.ModelAndView com.framework.webClient.controller.LedTemplateTempController.ledtemplatetemp()
+2019-08-07 16:13:55,946 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectXfzpList],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateTempController.selectXfzpList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,946 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/saveMbTempinfo],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateTempController.saveMbTempinfo(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpSession)
+2019-08-07 16:13:55,946 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/deleteLedTemplateTempById],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateTempController.deleteLedTemplateTempById(java.lang.String)
+2019-08-07 16:13:55,946 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/saveFpzpToLedTempRelTemp],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateTempController.saveFpzpToLedTempRelTemp(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:13:55,947 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/fbggLedTemplateTemp],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateTempController.fbggLedTemplateTemp(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpSession)
+2019-08-07 16:13:55,948 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sendLedLine],methods=[GET]}" onto public void com.framework.webClient.controller.WebServiceController.sendLedLine(java.lang.String)
+2019-08-07 16:13:55,948 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sendLedLastBus],methods=[GET]}" onto public void com.framework.webClient.controller.WebServiceController.sendLedLastBus(java.lang.String,java.lang.String)
+2019-08-07 16:13:55,948 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/send0905],methods=[GET]}" onto public void com.framework.webClient.controller.WebServiceController.send0905(java.lang.String)
+2019-08-07 16:13:55,948 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/refreshData],methods=[GET]}" onto public void com.framework.webClient.controller.WebServiceController.refreshData()
+2019-08-07 16:13:55,948 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedLineByLedNo]}" onto public java.lang.String com.framework.webClient.controller.WebServiceController.selectLedLineByLedNo(java.lang.String,java.lang.String) throws com.fasterxml.jackson.core.JsonGenerationException,com.fasterxml.jackson.databind.JsonMappingException,java.io.IOException
+2019-08-07 16:13:55,949 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedResourcesByLedNo]}" onto public java.lang.String com.framework.webClient.controller.WebServiceController.selectLedResourcesByLedNo(java.lang.String,java.lang.String) throws com.fasterxml.jackson.core.JsonGenerationException,com.fasterxml.jackson.databind.JsonMappingException,java.io.IOException
+2019-08-07 16:13:55,951 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-07 16:13:55,951 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-07 16:13:56,006 INFO (AbstractUrlHandlerMapping.java:354)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-07 16:13:56,007 INFO (AbstractUrlHandlerMapping.java:354)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-07 16:13:56,054 INFO (AbstractUrlHandlerMapping.java:354)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-07 16:13:56,745 INFO (SLF4JLogger.java:71)- Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-08-07 16:13:57,466 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:13:57,467 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:13:57,469 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:13:57,470 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2019-08-07 16:13:57,471 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:13:57,471 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:13:57,473 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2019-08-07 16:13:57,473 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:13:57,474 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2019-08-07 16:13:57,475 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2019-08-07 16:13:57,475 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:13:57,476 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:13:57,476 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:13:57,771 INFO (SLF4JLogger.java:76)- Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 common frames omitted
+2019-08-07 16:13:58,231 INFO (OptionalLiveReloadServer.java:58)- LiveReload server is running on port 35729
+2019-08-07 16:13:58,295 INFO (MBeanExporter.java:431)- Registering beans for JMX exposure on startup
+2019-08-07 16:13:58,302 INFO (MBeanExporter.java:912)- Bean with name 'cachingConnectionFactory' has been autodetected for JMX exposure
+2019-08-07 16:13:58,307 INFO (MBeanExporter.java:674)- Located managed bean 'cachingConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=cachingConnectionFactory,type=CachingConnectionFactory]
+2019-08-07 16:13:58,321 INFO (MBeanExporter.java:431)- Registering beans for JMX exposure on startup
+2019-08-07 16:13:58,328 INFO (DefaultLifecycleProcessor.java:341)- Starting beans in phase -2147482648
+2019-08-07 16:13:58,328 INFO (DefaultLifecycleProcessor.java:341)- Starting beans in phase 0
+2019-08-07 16:13:58,334 INFO (MBeanExporter.java:674)- Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+2019-08-07 16:13:58,342 INFO (MBeanExporter.java:674)- Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+2019-08-07 16:13:58,345 INFO (MBeanExporter.java:674)- Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+2019-08-07 16:13:58,348 INFO (MBeanExporter.java:674)- Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+2019-08-07 16:13:58,352 INFO (MBeanExporter.java:674)- Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+2019-08-07 16:13:58,357 INFO (MBeanExporter.java:674)- Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+2019-08-07 16:13:58,363 INFO (MBeanExporter.java:674)- Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+2019-08-07 16:13:58,366 INFO (MBeanExporter.java:674)- Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+2019-08-07 16:13:58,368 INFO (MBeanExporter.java:674)- Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+2019-08-07 16:13:58,371 INFO (MBeanExporter.java:674)- Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+2019-08-07 16:13:58,372 INFO (DefaultLifecycleProcessor.java:341)- Starting beans in phase 2147483647
+2019-08-07 16:13:58,411 INFO (AbstractConnectionFactory.java:301)- Created new connection: SimpleConnection@163cfcb0 [delegate=amqp://guest@10.1.22.5:20002/, localPort= 51937]
+2019-08-07 16:13:58,483 INFO (DirectJDKLog.java:179)- Initializing ProtocolHandler ["http-nio-8080"]
+2019-08-07 16:13:58,496 INFO (DirectJDKLog.java:179)- Starting ProtocolHandler [http-nio-8080]
+2019-08-07 16:13:58,511 INFO (DirectJDKLog.java:179)- Using a shared selector for servlet write/read
+2019-08-07 16:13:58,529 INFO (TomcatEmbeddedServletContainer.java:185)- Tomcat started on port(s): 8080 (http)
+2019-08-07 16:14:20,852 INFO (StartupInfoLogger.java:57)- Started Application in 31.302 seconds (JVM running for 32.064)
+2019-08-07 16:14:23,574 INFO (DirectJDKLog.java:179)- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-08-07 16:14:23,575 INFO (FrameworkServlet.java:489)- FrameworkServlet 'dispatcherServlet': initialization started
+2019-08-07 16:14:23,593 INFO (FrameworkServlet.java:508)- FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2019-08-07 16:14:23,634 INFO (TemplateEngine.java:825)- [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2019-08-07 16:14:23,662 INFO (AbstractTemplateResolver.java:99)- [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+2019-08-07 16:14:23,663 INFO (AbstractTemplateResolver.java:110)- [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2019-08-07 16:14:23,663 INFO (AbstractMessageResolver.java:72)- [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2019-08-07 16:14:23,663 INFO (AbstractMessageResolver.java:78)- [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2019-08-07 16:14:23,666 INFO (ConfigurationPrinterHelper.java:123)- [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * XML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * HTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2019-08-07 16:14:23,666 INFO (TemplateEngine.java:838)- [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2019-08-07 16:15:22,989 INFO (AbstractApplicationContext.java:987)- Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c6b992b: startup date [Wed Aug 07 16:13:50 CST 2019]; root of context hierarchy
+2019-08-07 16:15:22,992 INFO (DefaultLifecycleProcessor.java:356)- Stopping beans in phase 2147483647
+2019-08-07 16:15:22,998 INFO (SimpleMessageListenerContainer.java:873)- Waiting for workers to finish.
+2019-08-07 16:15:23,525 INFO (SimpleMessageListenerContainer.java:876)- Successfully waited for workers to finish.
+2019-08-07 16:15:23,525 INFO (DefaultLifecycleProcessor.java:356)- Stopping beans in phase 0
+2019-08-07 16:15:23,525 INFO (DefaultLifecycleProcessor.java:356)- Stopping beans in phase -2147482648
+2019-08-07 16:15:23,526 INFO (MBeanExporter.java:449)- Unregistering JMX-exposed beans on shutdown
+2019-08-07 16:15:23,530 INFO (MBeanRegistrationSupport.java:241)- Unregistering JMX-exposed beans
+2019-08-07 16:15:23,531 INFO (MBeanExporter.java:449)- Unregistering JMX-exposed beans on shutdown
+2019-08-07 16:15:23,531 INFO (MBeanRegistrationSupport.java:241)- Unregistering JMX-exposed beans
+2019-08-07 16:16:44,314 INFO (StartupInfoLogger.java:48)- Starting Application on maogeer-PC with PID 9944 (E:\myspace8\service-web-led\target\classes started by maogeer in E:\myspace8\service-web-led)
+2019-08-07 16:16:44,315 INFO (SpringApplication.java:661)- No active profile set, falling back to default profiles: default
+2019-08-07 16:16:44,427 INFO (Version.java:30)- HV000001: Hibernate Validator 5.2.4.Final
+2019-08-07 16:16:44,507 INFO (AbstractApplicationContext.java:582)- Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77b565ea: startup date [Wed Aug 07 16:16:44 CST 2019]; root of context hierarchy
+2019-08-07 16:16:46,542 WARN (ClassPathMapperScanner.java:167)- No MyBatis mapper was found in '[com.framework.dao]' package. Please check your configuration.
+2019-08-07 16:16:46,877 INFO (RepositoryConfigurationDelegate.java:170)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-07 16:16:47,254 INFO (RepositoryConfigurationDelegate.java:170)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-07 16:16:47,876 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [class org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$daf59702] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:16:47,912 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [class org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$5d9c0ef2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:16:47,919 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1489d8d4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:16:47,959 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$520fd396] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:16:48,057 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [class org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:16:48,066 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers' of type [class org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:16:48,069 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration' of type [class org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration$$EnhancerBySpringCGLIB$$2a16ff0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:16:48,076 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConfiguration' of type [class org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConfiguration$$EnhancerBySpringCGLIB$$5a2c5e61] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:16:48,090 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [class org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:16:48,098 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConnectionConfiguration' of type [class org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConnectionConfiguration$$EnhancerBySpringCGLIB$$a883ffe3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:16:48,133 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'redisConnectionFactory' of type [class org.springframework.data.redis.connection.jedis.JedisConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:16:48,157 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'redisTemplate' of type [class org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:16:48,168 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'cacheManager' of type [class org.springframework.data.redis.cache.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:16:48,170 INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'cacheAutoConfigurationValidator' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:16:48,453 INFO (TomcatEmbeddedServletContainer.java:87)- Tomcat initialized with port(s): 8080 (http)
+2019-08-07 16:16:48,461 INFO (DirectJDKLog.java:179)- Starting service Tomcat
+2019-08-07 16:16:48,462 INFO (DirectJDKLog.java:179)- Starting Servlet Engine: Apache Tomcat/8.5.6
+2019-08-07 16:16:48,544 INFO (DirectJDKLog.java:179)- Initializing Spring embedded WebApplicationContext
+2019-08-07 16:16:48,544 INFO (EmbeddedWebApplicationContext.java:276)- Root WebApplicationContext: initialization completed in 4037 ms
+2019-08-07 16:16:48,827 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'metricsFilter' to: [/*]
+2019-08-07 16:16:48,828 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-07 16:16:48,828 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-08-07 16:16:48,828 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-08-07 16:16:48,829 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'requestContextFilter' to: [/*]
+2019-08-07 16:16:48,829 INFO (AbstractFilterRegistrationBean.java:271)- Mapping filter: 'SSOAuth' to urls: [/*, /logout]
+2019-08-07 16:16:48,829 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2019-08-07 16:16:48,829 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'applicationContextIdFilter' to: [/*]
+2019-08-07 16:16:48,830 INFO (ServletRegistrationBean.java:190)- Mapping servlet: 'dispatcherServlet' to [/]
+2019-08-07 16:16:48,870 INFO (LedMsgProcessService.java:99)- ----------LedMsgProcessService Initializing ----------------
+2019-08-07 16:16:48,875 INFO (MsgEncoder.java:38)- ----------MsgEncoder Initializing ----------------
+2019-08-07 16:16:48,879 INFO (BitOperator.java:14)- ----------BitOperator Initializing ----------------
+2019-08-07 16:16:48,888 INFO (BCDOperater.java:12)- ----------BCDOperater Initializing ----------------
+2019-08-07 16:16:49,324 INFO (LedDownSender.java:53)- ----------LedDownSender Initializing ----------------
+2019-08-07 16:16:49,961 ERROR (RedisPool.java:100)- init param error!
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:542)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.framework.redis.RedisPool.initParam(RedisPool.java:68)
+	at com.framework.redis.RedisPool$$EnhancerBySpringCGLIB$$876d3360.CGLIB$initParam$0(<generated>)
+	at com.framework.redis.RedisPool$$EnhancerBySpringCGLIB$$876d3360$$FastClassBySpringCGLIB$$b2018899.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at com.framework.redis.RedisPool$$EnhancerBySpringCGLIB$$876d3360.initParam(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1128)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1022)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at com.framework.Application.main(Application.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2019-08-07 16:16:50,317 INFO (RequestMappingHandlerAdapter.java:534)- Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77b565ea: startup date [Wed Aug 07 16:16:44 CST 2019]; root of context hierarchy
+2019-08-07 16:16:50,363 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectZdxx],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.CommonController.selectZdxx(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,363 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectXlxx],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.CommonController.selectXlxx(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,365 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedCsszbByMbinfo],methods=[POST]}" onto public java.util.List<com.framework.webClient.entity.LedCsszb> com.framework.webClient.controller.LedCsszbController.selectLedCsszbByMbinfo(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,366 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/LedCsszb],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.framework.webClient.controller.LedCsszbController.ledContentManage()
+2019-08-07 16:16:50,366 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/insertLedCsszb],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedCsszbController.insertLedCsszb(com.framework.webClient.entity.LedCsszb,javax.servlet.http.HttpSession)
+2019-08-07 16:16:50,367 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectCsmbCombox],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedCsszbController.selectCsmbCombox()
+2019-08-07 16:16:50,367 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectSystemPara],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedCsszbController.selectSystemPara()
+2019-08-07 16:16:50,367 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/updateSystemPara],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedCsszbController.updateSystemPara(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,367 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/deleteLedCsszbById],methods=[POST]}" onto public int com.framework.webClient.controller.LedCsszbController.deleteLedCsszbById(java.lang.String)
+2019-08-07 16:16:50,368 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/updateLedCsszbById],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedCsszbController.updateLedCsszbById(com.framework.webClient.entity.LedCsszb,javax.servlet.http.HttpSession)
+2019-08-07 16:16:50,371 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedList],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedListController.selectLedList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,372 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ledlist],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.framework.webClient.controller.LedListController.ledList()
+2019-08-07 16:16:50,372 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ledlistadd],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.framework.webClient.controller.LedListController.ledListAdd()
+2019-08-07 16:16:50,373 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedListAdd],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedListController.selectLedListAdd(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,373 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/saveLedList],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedListController.saveLedList(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpSession)
+2019-08-07 16:16:50,373 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/delLedList],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedListController.delLedList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,374 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/importLedExcel],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedListController.importLedExcel(javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpSession)
+2019-08-07 16:16:50,374 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/downErrorFile]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.FileSystemResource> com.framework.webClient.controller.LedListController.downErrorFile(javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2019-08-07 16:16:50,374 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedParaInfo],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedListController.selectLedParaInfo(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,374 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/saveOrSaveSendLedPara],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedListController.saveOrSaveSendLedPara(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,375 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/],methods=[GET || POST]}" onto public org.springframework.web.servlet.ModelAndView com.framework.webClient.controller.LedMenuController.ledmanage(javax.servlet.http.HttpSession)
+2019-08-07 16:16:50,375 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/getSystemMenuTrees],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedMenuController.getSystemMenuTrees(javax.servlet.http.HttpSession)
+2019-08-07 16:16:50,376 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedMsg0906Byledno],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedMsgController.selectLedMsg0906Byledno(java.lang.String)
+2019-08-07 16:16:50,376 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedSjzdByPzdbm],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedSjzdController.selectLedSjzdByPzdbm(java.lang.String)
+2019-08-07 16:16:50,377 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedSjzdByPzdbmList],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedSjzdController.selectLedSjzdByPzdbmList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,377 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ledstate]}" onto public org.springframework.web.servlet.ModelAndView com.framework.webClient.controller.LedStateController.ledstate()
+2019-08-07 16:16:50,378 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedStateInfo],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedStateController.selectLedStateInfo(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,379 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/exportledstate],methods=[GET]}" onto public void com.framework.webClient.controller.LedStateController.exportLedStateExcel(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpServletResponse)
+2019-08-07 16:16:50,380 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ledstatemonitor]}" onto public org.springframework.web.servlet.ModelAndView com.framework.webClient.controller.LedStateMonitorController.ledstatemonitor()
+2019-08-07 16:16:50,380 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedStateMonitor],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedStateMonitorController.selectLedStateMonitor(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,382 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ledtemplate],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.framework.webClient.controller.LedTemplateController.ledContentManage()
+2019-08-07 16:16:50,382 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/saveMbinfo],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateController.saveMbinfo(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpSession)
+2019-08-07 16:16:50,383 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/uploadToFtp],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.String> com.framework.webClient.controller.LedTemplateController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2019-08-07 16:16:50,383 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectFpzpList],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateController.selectFpzpList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,383 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedTemplateByInfo],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedTemplateController.selectLedTemplateByInfo(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,383 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectQyszByMbidAndFqlx],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateController.selectQyszByMbidAndFqlx(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,384 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/deleteLedTemplateById],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateController.deleteLedTemplateById(java.lang.String)
+2019-08-07 16:16:50,384 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectTemplateList],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedTemplateController.selectTemplateList()
+2019-08-07 16:16:50,384 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/saveFpzpToLedTempRel],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateController.saveFpzpToLedTempRel(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,386 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ledtemplatetemp]}" onto public org.springframework.web.servlet.ModelAndView com.framework.webClient.controller.LedTemplateTempController.ledtemplatetemp()
+2019-08-07 16:16:50,387 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectXfzpList],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateTempController.selectXfzpList(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,387 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/saveMbTempinfo],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateTempController.saveMbTempinfo(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpSession)
+2019-08-07 16:16:50,387 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedTemplateTempByInfo],methods=[POST]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.framework.webClient.controller.LedTemplateTempController.selectLedTemplateTempByInfo(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,388 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectGgszByMbidAndFqlx],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateTempController.selectGgszByMbidAndFqlx(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,388 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/deleteLedTemplateTempById],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateTempController.deleteLedTemplateTempById(java.lang.String)
+2019-08-07 16:16:50,388 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/saveFpzpToLedTempRelTemp],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateTempController.saveFpzpToLedTempRelTemp(java.util.Map<java.lang.String, java.lang.Object>)
+2019-08-07 16:16:50,388 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/fbggLedTemplateTemp],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.framework.webClient.controller.LedTemplateTempController.fbggLedTemplateTemp(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpSession)
+2019-08-07 16:16:50,390 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sendLedLine],methods=[GET]}" onto public void com.framework.webClient.controller.WebServiceController.sendLedLine(java.lang.String)
+2019-08-07 16:16:50,391 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sendLedLastBus],methods=[GET]}" onto public void com.framework.webClient.controller.WebServiceController.sendLedLastBus(java.lang.String,java.lang.String)
+2019-08-07 16:16:50,391 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/refreshData],methods=[GET]}" onto public void com.framework.webClient.controller.WebServiceController.refreshData()
+2019-08-07 16:16:50,391 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/send0905],methods=[GET]}" onto public void com.framework.webClient.controller.WebServiceController.send0905(java.lang.String)
+2019-08-07 16:16:50,391 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedLineByLedNo]}" onto public java.lang.String com.framework.webClient.controller.WebServiceController.selectLedLineByLedNo(java.lang.String,java.lang.String) throws com.fasterxml.jackson.core.JsonGenerationException,com.fasterxml.jackson.databind.JsonMappingException,java.io.IOException
+2019-08-07 16:16:50,391 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/selectLedResourcesByLedNo]}" onto public java.lang.String com.framework.webClient.controller.WebServiceController.selectLedResourcesByLedNo(java.lang.String,java.lang.String) throws com.fasterxml.jackson.core.JsonGenerationException,com.fasterxml.jackson.databind.JsonMappingException,java.io.IOException
+2019-08-07 16:16:50,395 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-07 16:16:50,395 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-07 16:16:50,433 INFO (AbstractUrlHandlerMapping.java:354)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-07 16:16:50,433 INFO (AbstractUrlHandlerMapping.java:354)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-07 16:16:50,477 INFO (AbstractUrlHandlerMapping.java:354)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-07 16:16:51,162 INFO (SLF4JLogger.java:71)- Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-08-07 16:16:51,840 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2019-08-07 16:16:51,841 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2019-08-07 16:16:51,842 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:16:51,842 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:16:51,845 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:16:51,846 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:16:51,846 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:16:51,848 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:16:51,849 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:16:51,851 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2019-08-07 16:16:51,851 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:16:51,852 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2019-08-07 16:16:51,852 INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-08-07 16:16:52,184 INFO (SLF4JLogger.java:76)- Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 common frames omitted
+2019-08-07 16:16:52,219 INFO (OptionalLiveReloadServer.java:58)- LiveReload server is running on port 35729
+2019-08-07 16:16:52,281 INFO (MBeanExporter.java:431)- Registering beans for JMX exposure on startup
+2019-08-07 16:16:52,290 INFO (MBeanExporter.java:912)- Bean with name 'cachingConnectionFactory' has been autodetected for JMX exposure
+2019-08-07 16:16:52,297 INFO (MBeanExporter.java:674)- Located managed bean 'cachingConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=cachingConnectionFactory,type=CachingConnectionFactory]
+2019-08-07 16:16:52,313 INFO (MBeanExporter.java:431)- Registering beans for JMX exposure on startup
+2019-08-07 16:16:52,319 INFO (DefaultLifecycleProcessor.java:341)- Starting beans in phase -2147482648
+2019-08-07 16:16:52,319 INFO (DefaultLifecycleProcessor.java:341)- Starting beans in phase 0
+2019-08-07 16:16:52,326 INFO (MBeanExporter.java:674)- Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+2019-08-07 16:16:52,333 INFO (MBeanExporter.java:674)- Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+2019-08-07 16:16:52,336 INFO (MBeanExporter.java:674)- Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+2019-08-07 16:16:52,338 INFO (MBeanExporter.java:674)- Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+2019-08-07 16:16:52,342 INFO (MBeanExporter.java:674)- Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+2019-08-07 16:16:52,345 INFO (MBeanExporter.java:674)- Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+2019-08-07 16:16:52,352 INFO (MBeanExporter.java:674)- Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+2019-08-07 16:16:52,355 INFO (MBeanExporter.java:674)- Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+2019-08-07 16:16:52,358 INFO (MBeanExporter.java:674)- Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+2019-08-07 16:16:52,360 INFO (MBeanExporter.java:674)- Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+2019-08-07 16:16:52,361 INFO (DefaultLifecycleProcessor.java:341)- Starting beans in phase 2147483647
+2019-08-07 16:16:52,421 INFO (AbstractConnectionFactory.java:301)- Created new connection: SimpleConnection@6bbc75ab [delegate=amqp://guest@10.1.22.5:20002/, localPort= 52181]
+2019-08-07 16:16:52,503 INFO (DirectJDKLog.java:179)- Initializing ProtocolHandler ["http-nio-8080"]
+2019-08-07 16:16:52,514 INFO (DirectJDKLog.java:179)- Starting ProtocolHandler [http-nio-8080]
+2019-08-07 16:16:52,529 INFO (DirectJDKLog.java:179)- Using a shared selector for servlet write/read
+2019-08-07 16:16:52,546 INFO (TomcatEmbeddedServletContainer.java:185)- Tomcat started on port(s): 8080 (http)
+2019-08-07 16:16:55,676 INFO (DirectJDKLog.java:179)- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-08-07 16:16:55,677 INFO (FrameworkServlet.java:489)- FrameworkServlet 'dispatcherServlet': initialization started
+2019-08-07 16:16:55,694 INFO (FrameworkServlet.java:508)- FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2019-08-07 16:16:55,734 INFO (TemplateEngine.java:825)- [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2019-08-07 16:16:55,765 INFO (AbstractTemplateResolver.java:99)- [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+2019-08-07 16:16:55,765 INFO (AbstractTemplateResolver.java:110)- [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2019-08-07 16:16:55,765 INFO (AbstractMessageResolver.java:72)- [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2019-08-07 16:16:55,765 INFO (AbstractMessageResolver.java:78)- [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2019-08-07 16:16:55,768 INFO (ConfigurationPrinterHelper.java:123)- [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * XML
+[THYMELEAF]     * XHTML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2019-08-07 16:16:55,768 INFO (TemplateEngine.java:838)- [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2019-08-07 16:17:14,445 INFO (StartupInfoLogger.java:57)- Started Application in 30.433 seconds (JVM running for 31.197)
+2019-08-07 16:31:35,714 INFO (SpringApplicationAdminMXBeanRegistrar.java:125)- Application shutdown requested.
+2019-08-07 16:31:35,715 INFO (AbstractApplicationContext.java:987)- Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77b565ea: startup date [Wed Aug 07 16:16:44 CST 2019]; root of context hierarchy
+2019-08-07 16:31:35,718 INFO (DefaultLifecycleProcessor.java:356)- Stopping beans in phase 2147483647
+2019-08-07 16:31:35,726 INFO (SimpleMessageListenerContainer.java:873)- Waiting for workers to finish.
+2019-08-07 16:31:36,467 INFO (SpringApplicationAdminMXBeanRegistrar.java:125)- Application shutdown requested.
+2019-08-07 16:31:36,509 INFO (SimpleMessageListenerContainer.java:876)- Successfully waited for workers to finish.
+2019-08-07 16:31:36,512 INFO (DefaultLifecycleProcessor.java:356)- Stopping beans in phase 0
+2019-08-07 16:31:36,512 INFO (DefaultLifecycleProcessor.java:356)- Stopping beans in phase -2147482648
+2019-08-07 16:31:36,622 INFO (MBeanExporter.java:449)- Unregistering JMX-exposed beans on shutdown
+2019-08-07 16:31:36,623 INFO (MBeanRegistrationSupport.java:241)- Unregistering JMX-exposed beans
+2019-08-07 16:31:36,623 INFO (MBeanExporter.java:449)- Unregistering JMX-exposed beans on shutdown
+2019-08-07 16:31:36,625 INFO (MBeanRegistrationSupport.java:241)- Unregistering JMX-exposed beans

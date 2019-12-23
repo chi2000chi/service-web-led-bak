@@ -1,0 +1,149 @@
+<!-- 视频区域样式设置块 -->
+<div id="videoCss_div" title="区域样式" th:fragment="videoCss_div">
+	<!-- 以下代码没有使用，进行了隐藏操作 -->
+    <form method="post" id="videoCss_form" style="display: none;">
+    <div style="display: none">
+		<input id="videoCss_fqid" name="fqid" class="easyui-textbox"/>
+		<input id="videoCss_addType" name="addType" class="easyui-textbox"/>
+	</div>
+    <fieldset class="subTitle">
+        <legend>区域信息设置</legend>
+    </fieldset>
+	<div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">起始X坐标</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="videoCss_start-x" name="start-x" class="easyui-textbox col-md-12 col-xs-12"
+                    data-options="required:true,validType:'length[1,13]'"
+                    style="height: 30px; width: 100%"/>
+         </div>
+
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">结束X坐标</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="videoCss_end-x" name="end-x" class="easyui-textbox col-md-12 col-xs-12"
+                    data-options="required:true,validType:'length[1,40]'"
+                    style="height: 30px; width: 100%"/>
+         </div>
+    </div>
+    <div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">起始Y坐标</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="videoCss_start-y" name="start-y" class="easyui-textbox col-md-12 col-xs-12"
+                    data-options="required:true,validType:'length[1,13]'"
+                    style="height: 30px; width: 100%"/>
+         </div>
+
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">结束Y坐标</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="videoCss_end-y" name="end-y" class="easyui-textbox col-md-12 col-xs-12"
+                    data-options="required:true,validType:'length[1,40]'"
+                    style="height: 30px; width: 100%"/>
+         </div>
+    </div>
+    <div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">前景色</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+<!--              <input id="videoCss_color" name="color" class="easyui-textbox col-md-12 col-xs-12" -->
+<!--                     data-options="required:true,validType:'length[1,13]'" -->
+<!--                     style="height: 30px; width: 100%"/> -->
+<!--         	 <input id="videoCss_color" class="jscolor" style="height: 30px;" /> -->
+        	 <input id="videoCss_color" class="typeColor" type="color" style="height: 30px;"/>	
+         </div>
+
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">背景色</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+<!--              <input id="videoCss_background-color" name="background-color" class="easyui-textbox col-md-12 col-xs-12" -->
+<!--                     data-options="required:true,validType:'length[1,40]'" -->
+<!--                     style="height: 30px; width: 100%"/> -->
+<!--          	 <input id="videoCss_background-color" class="jscolor" style="height: 30px;"/> -->
+         	 <input id="videoCss_background-color" class="typeColor" type="color" style="height: 30px;"/>	
+         </div>
+    </div>
+    <div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">背景图片</label>
+         </div>
+         <div class="col-md-8 col-xs-8">
+           		<input id="videoCss_background-image" name="background-image" class="easyui-textbox col-md-12 col-xs-12"
+                    data-options="required:true,editable:false"
+                    style="height: 30px; width: 100%"/>
+         </div>
+         <div class="col-md-2 col-xs-2">
+         	<a id="videoCss_upload" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="iconCls:''"
+            		 style="width:65px;height:24px; margin-top: 3px; margin-left: 5px;">上传</a>
+         </div>
+    </div>
+    <fieldset class="subTitle">
+        <legend>视频区域样式</legend>
+    </fieldset>
+    <div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">显示时长</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="videoCss_show-time" name="show-time" class="easyui-textbox col-md-12 col-xs-12"
+                    data-options="required:true"
+                    style="height: 30px; width: 100%"/>
+         </div>
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">是否语音报读</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="videoCss_sound-flag" name="sound-flag" class="easyui-combobox col-md-12 col-xs-12"
+                    data-options="required:true, editable: false"
+                    style="height: 30px; width: 100%"/>
+         </div>
+    </div>
+    <div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">报读音量大小</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="videoCss_sound-volume" name="sound-volume" class="easyui-combobox col-md-12 col-xs-12"
+                    data-options="required:true, editable: false"
+                    style="height: 30px; width: 100%"/>
+         </div>
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">报读速度</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="videoCss_sound-speed" name="sound-speed" class="easyui-combobox col-md-12 col-xs-12"
+                    data-options="required:true, editable: false"
+                    style="height: 30px; width: 100%"/>
+         </div>
+    </div>
+    <div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">定时显示表达式</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="videoCss_cron" name="cron" class="easyui-textbox col-md-12 col-xs-12"
+                    data-options="required:true,validType:'length[1,20]'"
+                    style="height: 30px; width: 100%"/>
+         </div>
+    </div>
+    </form>
+   	<!-- 以上代码没有使用，进行了隐藏操作 -->
+    <fieldset class="subTitle">
+        <legend>视频设置</legend>
+    </fieldset>
+	<div class="row clearfix">
+		<div id="videoCss_sz_div" style="height: 100px">
+			<a id="videoCss_sz_add_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="iconCls:'icon-zd-add',toggle:true,group:'g1'"
+	            		 style="width:80px;height:24px; margin-bottom: 10px; margin-left: 55px;">添加视频</a>
+	        <table class="tableClass" id="videoCss_sz_table" style="width: 95%; height: 90%; margin-left: 20px;text-align: center;">
+	        </table>
+		</div>
+    </div>
+</div>

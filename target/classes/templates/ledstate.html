@@ -1,0 +1,108 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <link href="frontend/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="frontend/css/easyui.css" rel="stylesheet" type="text/css"/>
+    <link href="frontend/css/main.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="frontend/js/jquery.min.js"></script>
+	<script type="text/javascript" src="frontend/js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="frontend/js/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="frontend/js/datagrid-detailview.js"></script>
+    <title>电子站牌后台系统</title>
+    <meta http-equiv="Pragma" content="no-cache"></meta>
+    <meta http-equiv="Cache-Control" content="no-cache"></meta>
+    <meta http-equiv="Expires" content="0"></meta>
+	<style type="text/css">
+	 	td[field="_expander"]{
+	 		display: none;
+	 	}
+	 	.datagrid-header-expander{
+	 		display: none;
+		}
+	</style>
+</head>
+<body>
+<!-- 引入加载loading文件 -->
+<div th:replace="loading :: loading" ></div>
+
+<div id="main">
+    <div class="zd-nav">当前位置：电子站牌后台系统&nbsp;&nbsp;&gt;&nbsp;&nbsp;电子站牌状态监控<p class="zd-nav-right"><a href="javascript:;" class="btn-searchDetail">收起搜索<span></span></a></p></div>
+
+    <div class="zd-box">
+        <div class="panel-controller">
+            <div class="row clearfix">
+                <div class="col-md-1 col-xs-1 no-pad hei-3">
+                    <label class="ri-center">站牌名称</label>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                    <input id="search_ledmc" class="easyui-textbox" data-options="" style="width:100%;height:24px"/>
+                </div>
+                <div class="col-md-1 col-xs-1 no-pad hei-3">
+                    <label class="ri-center">站牌编号</label>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                    <input id="search_ledbh" class="easyui-textbox" data-options="prompt:''" style="width:100%;height:24px"/>
+                </div>
+                <div class="col-md-1 col-xs-1 no-pad hei-3">
+                    <label class="ri-center">接收时间</label>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                        <input id="search_jssjks" name="sbyxsjks" class="easyui-datebox "
+                               data-options="editable:false"
+                               style="height: 30px; width: 47%"/>-
+                        <input id="search_jssjjs" name="sbyxsjjs" class="easyui-datebox"
+                               data-options="editable:false"
+                               style="height: 30px; width: 47%"/>
+                </div>
+            </div>
+             <div class="row clearfix">
+                <div class="col-md-1 col-xs-1 no-pad hei-3">
+                    <label class="ri-center">线路</label>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                   <input id="search_xl" class="easyui-combobox" data-options="prompt:'',editable:true,mode:'remote'" style="width:100%;height:24px"/>
+                </div>
+                <div class="col-md-1 col-xs-1 no-pad hei-3">
+                    <label class="ri-center">站点</label>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                    <input id="search_zd" class="easyui-combobox" data-options="prompt:'',editable:false" style="width:100%;height:24px"/>
+                </div>
+                <div class="col-md-1 col-xs-1 no-pad hei-3">
+                    <label class="ri-center">设备状态</label>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                   <input id="search_sbzt" class="easyui-combobox" data-options="prompt:'',editable:false" style="width:100%;height:24px"/>
+                </div>
+            </div>
+        </div>
+        <div class="zd-controller">
+            <div class="zd-controller-left">
+                <a id="search_btn" href="javascript:;" class="easyui-linkbutton zd-btn-search" data-options="iconCls:'icon-zd-search',toggle:true,group:'g1'" style="width:65px;height:24px;">查询</a>
+            </div>
+            <div class="zd-controller-right">
+                <a id="export_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="toggle:true,group:'g1'" style="width:65px;height:24px;">导出</a>
+            </div>
+        </div>
+        <table id="datagrid" class="easyui-datagrid" style="width:100%;"
+               data-options="singleSelect:false,collapsible:true,pagination:true,rownumbers:true,pageSize:50,nowrap:false,fitColumns:true">
+            <thead>
+            <tr>
+                <th data-options="field:'ledmc'" style="width:25%">站牌名称</th>
+                <th data-options="field:'ledbh'"  style="width:25%">站牌编号</th>
+                <th data-options="field:'sbzt', formatter: sbztFormatterFun" style="width:25%">设备状态</th>
+                <th data-options="field:'jssj'" style="width:25%">接收时间</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+
+</body>
+<script type="text/javascript" src="frontend/js/common.js"></script>
+<script type="text/javascript" src="frontend/project/js/ledCommon.js"></script>
+<script type="text/javascript" src="frontend/project/js/ledstate.js"></script>
+</html>

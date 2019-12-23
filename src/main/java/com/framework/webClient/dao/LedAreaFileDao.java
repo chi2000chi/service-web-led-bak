@@ -1,0 +1,1 @@
+package com.framework.webClient.dao;import java.util.List;import java.util.Map;/** * @author 吉庆 * @date Fri Aug 17 00:00:00 CST 2018 */public interface LedAreaFileDao {	public int deleteLedAreaFileById(Map<String, Object> paramMap);		/**	 * 	 * 添加分区文件表	 * @param paramList	 * @return	 */	public int insertLedAreaFile(List<Map<String, Object>> paramList);}

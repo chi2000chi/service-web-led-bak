@@ -1,0 +1,1 @@
+package com.framework.webClient.dao;import java.util.Map;/** * @author 吉庆 * @date Mon Oct 08 00:00:00 CST 2018 */public interface LedUploadParaDao {	Map<String, Object> selectLedUploadParaInfoByLedid(Map<String, Object> paramMap);}

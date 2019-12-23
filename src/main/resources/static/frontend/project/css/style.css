@@ -1,0 +1,234 @@
+html, body, p, form, img, ul, li, h1, h2, h3, h4, h5, h6,ol {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+select, input, img {
+    vertical-align: middle;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover, a:active, a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+img {
+    border-width: 0;
+    max-width: 100%;
+}
+body, html, #main, #allmap{width: 100%;height: 100%;}
+body {
+    font-family: "Microsoft YaHei";
+    font-size: 75%;
+}
+#container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom:0;
+}
+#main{
+    position:relative;
+    height:100%;
+    overflow: hidden;
+    opacity: 1;
+    color: #000;
+}
+header{
+    height: 5%;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    background-color: rgba(255,255,245,.8);
+}
+#logo{
+    position: absolute;
+    font-size: 2.8vh;
+    padding: 5px 0 0 20px;
+    color: #666;
+}
+#logo img{
+    width: 100%;
+}
+.s-panel{
+    background-color: rgba(255,255,245,.6);
+    border:3px solid #666;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.left-tit{
+    position: absolute;
+    top:5px;
+    left:10px;
+    font-size: 14px;
+}
+.icon-close{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 10px;
+    top:10px;
+    background: url("../css/img/icon_sckq_close.png") no-repeat;
+}
+.icon-close:hover{
+    background-position: -20px 0;
+}
+.btn-search{
+    background-color: #f5f5f5;
+    border:1px solid #666;
+    color: #000;
+    width: 60px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    display: block;
+}
+#left-panel1{
+    left: 1%;
+    top: 7%;
+    width: 24%;
+    height: 13%;
+}
+#left-panel1-table{
+    width:100%;
+    height: 100%;
+    margin-top: 6px;
+}
+#left-panel1-table th{
+    text-align: right;
+    font-weight: normal;
+    width: 24%;
+    padding: 5px;
+}
+#left-panel1-table td{
+    padding: 5px;
+}
+
+#left-panel2{
+    left:1%;
+    top:22%;
+    width: 24%;
+    height: 9%;
+}
+.left-color{
+    margin: 20px 0 0 0;
+}
+.left-color:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.left-color>li{
+    width: 23%;
+    float: left;
+    text-align: center;
+    list-style: none;
+    margin-right: 2%;
+}
+.left-color-panel{
+    width: 50%;
+    height: 20px;
+    float: right;
+    box-shadow: 4px 4px 4px #888888;
+    margin-top: -2px;
+}
+.blue{
+    background-color: #2dabde;
+}
+.green{
+    background-color: #09ff00;
+}
+.black{
+    background-color: #000;
+}
+.red{
+    background-color: #f80205;
+}
+
+#left-panel3{
+    left:1%;
+    top:33%;
+    width: 24%;
+    height: 32%;
+}
+#left-panel3-chart, #left-panel4-chart{
+    top:10px;
+    left:10px;
+    right:10px;
+    bottom:50px;
+    position: absolute;
+}
+#left-panel4{
+    left:1%;
+    top:67%;
+    width: 24%;
+    height: 32%;
+}
+.left-txt{
+    position: absolute;
+    bottom: 15px;
+    left:0;
+    right: 0;
+    text-align: center;
+    font-size: 14px;
+}
+.left-txt li{
+    width:50%;
+    float: left;
+    list-style: none;
+    line-height: 100%;
+}
+.left-txt li span{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ff0000;
+}
+#info-panel{
+    left:60%;
+    top:27%;
+    width: 27%;
+}
+#right-info-table{
+    width: 100%;
+}
+#right-info-table th{
+    font-weight: normal;
+    text-align: right;
+    padding: 2px 5px;
+    width: 80px;
+}
+#right-info-table td{
+    padding: 2px 5px;
+}
+.right-tit{
+    margin: 5px;
+    font-size: 14px;
+}
+#right-site-table{
+    width: 100%;
+    border-right:1px solid #666;
+    border-bottom:1px solid #666;
+}
+#right-site-table th{
+    border-top:1px solid #666;
+    border-left:1px solid #666;
+    padding: 3px;
+}
+#right-site-table td{
+    border-top:1px solid #666;
+    border-left:1px solid #666;
+    padding: 3px;
+}

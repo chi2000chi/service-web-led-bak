@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.framework.webClient.dao.WebClientConfigMapper">
+  <resultMap id="BaseResultMap" type="com.framework.webClient.entity.User" >
+    <id column="ID" property="userid" jdbcType="INTEGER" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="PASS" property="pass" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID,NAME,PASS
+  </sql>
+  
+  <select id="selectByName" resultMap="BaseResultMap" parameterType="String" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_user
+    where name = #{name}
+  </select>
+	
+</mapper>

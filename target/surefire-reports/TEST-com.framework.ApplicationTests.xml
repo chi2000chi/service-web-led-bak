@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.framework.ApplicationTests" time="0.014" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="D:\jdk8\jre\bin"/>
+    <property name="java.vm.version" value="25.131-b11"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\myspace8\service-web-led"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\myspace8\service-web-led"/>
+    <property name="java.runtime.version" value="1.8.0_131-b11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="D:\jdk8\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\maogeer\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="E:\myspace8\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf8943160221073280466.tmp"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\jdk8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/jre8/bin/server;D:/jre8/bin;D:/jre8/lib/amd64;D:\12c;C:\ProgramData\Oracle\Java\javapath;D:\app\maogeer\product\11.2.0\dbhome_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;D:\soft installed\TortoiseSVN\bin;D:\apache-maven-3.5.4\bin\;%JAVA_HOME%\lib;D:\soft installed\PL_SQL\instantclient_11_2;C:\Users\maogeer\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\maogeer\AppData\Local\Programs\Python\Python37\;D:\soft installed\ssh;D:\sts-bundle\sts-3.9.2.RELEASE;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\maogeer"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="user.name" value="maogeer"/>
+    <property name="java.class.path" value="D:\apache-maven-3.5.4\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="D:\jdk8\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -gs D:\apache-maven-3.5.4\conf\settings.xml -s D:\apache-maven-3.5.4\conf\settings.xml install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_131"/>
+    <property name="java.ext.dirs" value="D:\jdk8\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="D:\jdk8\jre\lib\resources.jar;D:\jdk8\jre\lib\rt.jar;D:\jdk8\jre\lib\sunrsasign.jar;D:\jdk8\jre\lib\jsse.jar;D:\jdk8\jre\lib\jce.jar;D:\jdk8\jre\lib\charsets.jar;D:\jdk8\jre\lib\jfr.jar;D:\jdk8\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\apache-maven-3.5.4"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="initializationError" classname="com.framework.ApplicationTests" time="0.014">
+    <error message="Found multiple @SpringBootConfiguration annotated classes [Generic bean: class [com.framework.Application]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [E:\myspace8\service-web-led\target\classes\com\framework\Application.class], Generic bean: class [com.framework.ServiceCommonsApplication]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [jar:file:/D:/Maven_Repo/com/framework/service-commons/2.0.0-SNAPSHOT/service-commons-2.0.0-SNAPSHOT.jar!/com/framework/ServiceCommonsApplication.class]]" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: Found multiple @SpringBootConfiguration annotated classes [Generic bean: class [com.framework.Application]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [E:\myspace8\service-web-led\target\classes\com\framework\Application.class], Generic bean: class [com.framework.ServiceCommonsApplication]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [jar:file:/D:/Maven_Repo/com/framework/service-commons/2.0.0-SNAPSHOT/service-commons-2.0.0-SNAPSHOT.jar!/com/framework/ServiceCommonsApplication.class]]
+	at org.springframework.util.Assert.state(Assert.java:392)
+	at org.springframework.boot.test.context.SpringBootConfigurationFinder.scanPackage(SpringBootConfigurationFinder.java:69)
+	at org.springframework.boot.test.context.SpringBootConfigurationFinder.findFromPackage(SpringBootConfigurationFinder.java:59)
+	at org.springframework.boot.test.context.SpringBootConfigurationFinder.findFromClass(SpringBootConfigurationFinder.java:52)
+	at org.springframework.boot.test.context.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses(SpringBootTestContextBootstrapper.java:172)
+	at org.springframework.boot.test.context.SpringBootTestContextBootstrapper.processMergedContextConfiguration(SpringBootTestContextBootstrapper.java:133)
+	at org.springframework.test.context.support.AbstractTestContextBootstrapper.buildMergedContextConfiguration(AbstractTestContextBootstrapper.java:409)
+	at org.springframework.test.context.support.AbstractTestContextBootstrapper.buildDefaultMergedContextConfiguration(AbstractTestContextBootstrapper.java:323)
+	at org.springframework.test.context.support.AbstractTestContextBootstrapper.buildMergedContextConfiguration(AbstractTestContextBootstrapper.java:277)
+	at org.springframework.test.context.support.AbstractTestContextBootstrapper.buildTestContext(AbstractTestContextBootstrapper.java:112)
+	at org.springframework.boot.test.context.SpringBootTestContextBootstrapper.buildTestContext(SpringBootTestContextBootstrapper.java:78)
+	at org.springframework.test.context.TestContextManager.<init>(TestContextManager.java:120)
+	at org.springframework.test.context.TestContextManager.<init>(TestContextManager.java:105)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTestContextManager(SpringJUnit4ClassRunner.java:152)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.<init>(SpringJUnit4ClassRunner.java:143)
+	at org.springframework.test.context.junit4.SpringRunner.<init>(SpringRunner.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.internal.builders.AnnotatedBuilder.buildRunner(AnnotatedBuilder.java:104)
+	at org.junit.internal.builders.AnnotatedBuilder.runnerForClass(AnnotatedBuilder.java:86)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+	at org.junit.internal.requests.ClassRequest.getRunner(ClassRequest.java:33)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]></error>
+    <system-out><![CDATA[09:56:03.990 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.framework.ApplicationTests]
+09:56:03.997 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+09:56:04.052 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+09:56:04.091 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.framework.ApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+09:56:04.115 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.framework.ApplicationTests], using SpringBootContextLoader
+09:56:04.121 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.framework.ApplicationTests]: class path resource [com/framework/ApplicationTests-context.xml] does not exist
+09:56:04.122 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.framework.ApplicationTests]: class path resource [com/framework/ApplicationTestsContext.groovy] does not exist
+09:56:04.122 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.framework.ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+09:56:04.123 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.framework.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:56:04.193 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.framework.ApplicationTests]
+09:56:04.268 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+09:56:04.268 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+09:56:04.268 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+09:56:04.289 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [com/framework/] to resources [URL [file:/E:/myspace8/service-web-led/target/test-classes/com/framework/], URL [file:/E:/myspace8/service-web-led/target/classes/com/framework/], URL [jar:file:/D:/Maven_Repo/com/framework/service-commons/2.0.0-SNAPSHOT/service-commons-2.0.0-SNAPSHOT.jar!/com/framework/], URL [jar:file:/D:/Maven_Repo/com/framework/service-common-thrift/0.0.1-SNAPSHOT/service-common-thrift-0.0.1-SNAPSHOT.jar!/com/framework/]]
+09:56:04.289 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [E:\myspace8\service-web-led\target\test-classes\com\framework]
+09:56:04.290 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [E:\myspace8\service-web-led\target\test-classes\com\framework] for files matching pattern [E:/myspace8/service-web-led/target/test-classes/com/framework/*.class]
+09:56:04.294 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [E:\myspace8\service-web-led\target\classes\com\framework]
+09:56:04.294 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [E:\myspace8\service-web-led\target\classes\com\framework] for files matching pattern [E:/myspace8/service-web-led/target/classes/com/framework/*.class]
+09:56:04.296 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in jar file [file:/D:/Maven_Repo/com/framework/service-commons/2.0.0-SNAPSHOT/service-commons-2.0.0-SNAPSHOT.jar]
+09:56:04.303 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in jar file [file:/D:/Maven_Repo/com/framework/service-common-thrift/0.0.1-SNAPSHOT/service-common-thrift-0.0.1-SNAPSHOT.jar]
+09:56:04.305 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:com/framework/*.class] to resources [file [E:\myspace8\service-web-led\target\test-classes\com\framework\ApplicationTests.class], file [E:\myspace8\service-web-led\target\test-classes\com\framework\dbtest.class], file [E:\myspace8\service-web-led\target\test-classes\com\framework\demo.class], file [E:\myspace8\service-web-led\target\test-classes\com\framework\Test$1.class], file [E:\myspace8\service-web-led\target\test-classes\com\framework\Test.class], file [E:\myspace8\service-web-led\target\test-classes\com\framework\ThreadsTest$1.class], file [E:\myspace8\service-web-led\target\test-classes\com\framework\ThreadsTest.class], file [E:\myspace8\service-web-led\target\classes\com\framework\Application.class], file [E:\myspace8\service-web-led\target\classes\com\framework\ServletInitializer.class], URL [jar:file:/D:/Maven_Repo/com/framework/service-commons/2.0.0-SNAPSHOT/service-commons-2.0.0-SNAPSHOT.jar!/com/framework/ServiceCommonsApplication.class]]
+09:56:04.473 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\myspace8\service-web-led\target\classes\com\framework\Application.class]
+09:56:04.481 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: URL [jar:file:/D:/Maven_Repo/com/framework/service-commons/2.0.0-SNAPSHOT/service-commons-2.0.0-SNAPSHOT.jar!/com/framework/ServiceCommonsApplication.class]
+09:56:04.488 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.framework.ApplicationTests]
+09:56:04.488 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+09:56:04.488 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+09:56:04.489 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.framework.ApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+09:56:04.489 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.framework.ApplicationTests], using SpringBootContextLoader
+09:56:04.490 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.framework.ApplicationTests]: class path resource [com/framework/ApplicationTests-context.xml] does not exist
+09:56:04.491 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.framework.ApplicationTests]: class path resource [com/framework/ApplicationTestsContext.groovy] does not exist
+09:56:04.491 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.framework.ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+09:56:04.492 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.framework.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:56:04.500 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.framework.ApplicationTests]
+09:56:04.501 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+09:56:04.501 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+09:56:04.502 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+09:56:04.502 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [com/framework/] to resources [URL [file:/E:/myspace8/service-web-led/target/test-classes/com/framework/], URL [file:/E:/myspace8/service-web-led/target/classes/com/framework/], URL [jar:file:/D:/Maven_Repo/com/framework/service-commons/2.0.0-SNAPSHOT/service-commons-2.0.0-SNAPSHOT.jar!/com/framework/], URL [jar:file:/D:/Maven_Repo/com/framework/service-common-thrift/0.0.1-SNAPSHOT/service-common-thrift-0.0.1-SNAPSHOT.jar!/com/framework/]]
+09:56:04.503 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [E:\myspace8\service-web-led\target\test-classes\com\framework]
+09:56:04.503 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [E:\myspace8\service-web-led\target\test-classes\com\framework] for files matching pattern [E:/myspace8/service-web-led/target/test-classes/com/framework/*.class]
+09:56:04.506 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [E:\myspace8\service-web-led\target\classes\com\framework]
+09:56:04.507 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [E:\myspace8\service-web-led\target\classes\com\framework] for files matching pattern [E:/myspace8/service-web-led/target/classes/com/framework/*.class]
+09:56:04.508 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in jar file [file:/D:/Maven_Repo/com/framework/service-commons/2.0.0-SNAPSHOT/service-commons-2.0.0-SNAPSHOT.jar]
+09:56:04.512 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in jar file [file:/D:/Maven_Repo/com/framework/service-common-thrift/0.0.1-SNAPSHOT/service-common-thrift-0.0.1-SNAPSHOT.jar]
+09:56:04.514 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:com/framework/*.class] to resources [file [E:\myspace8\service-web-led\target\test-classes\com\framework\ApplicationTests.class], file [E:\myspace8\service-web-led\target\test-classes\com\framework\dbtest.class], file [E:\myspace8\service-web-led\target\test-classes\com\framework\demo.class], file [E:\myspace8\service-web-led\target\test-classes\com\framework\Test$1.class], file [E:\myspace8\service-web-led\target\test-classes\com\framework\Test.class], file [E:\myspace8\service-web-led\target\test-classes\com\framework\ThreadsTest$1.class], file [E:\myspace8\service-web-led\target\test-classes\com\framework\ThreadsTest.class], file [E:\myspace8\service-web-led\target\classes\com\framework\Application.class], file [E:\myspace8\service-web-led\target\classes\com\framework\ServletInitializer.class], URL [jar:file:/D:/Maven_Repo/com/framework/service-commons/2.0.0-SNAPSHOT/service-commons-2.0.0-SNAPSHOT.jar!/com/framework/ServiceCommonsApplication.class]]
+09:56:04.521 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\myspace8\service-web-led\target\classes\com\framework\Application.class]
+09:56:04.524 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: URL [jar:file:/D:/Maven_Repo/com/framework/service-commons/2.0.0-SNAPSHOT/service-commons-2.0.0-SNAPSHOT.jar!/com/framework/ServiceCommonsApplication.class]
+]]></system-out>
+  </testcase>
+</testsuite>

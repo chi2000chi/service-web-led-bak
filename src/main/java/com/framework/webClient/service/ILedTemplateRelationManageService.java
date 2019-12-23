@@ -1,0 +1,1 @@
+package com.framework.webClient.service;import java.util.List;import java.util.Map;/** * @author 吉庆 * @date Fri Aug 31 00:00:00 CST 2018 */public interface ILedTemplateRelationManageService {	public int saveFpzpToLedTempRel(Map<String, Object> paramMap);		public List<Map<String, Object>> selectUsedLedListByLedmcOrLedbh(Map<String, Object> paramMap);}

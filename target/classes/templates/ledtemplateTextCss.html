@@ -1,0 +1,229 @@
+<!-- 文本区域样式设置块 -->
+<div id="textCss_div" th:fragment="textCss_div">
+	<!-- 以下代码无效，在功能中没有使用 -->
+	<form method="post" id="textCss_form" style="display: none;">
+	<div style="display: none">
+		<input id="textCss_fqid" name="fqid" class="easyui-textbox"/>
+		<input id="textCss_addType" name="addType" class="easyui-textbox"/>
+	</div>
+	<fieldset class="subTitle">
+        <legend>区域信息设置</legend>
+    </fieldset>
+	<div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">起始X坐标</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="textCss_start-x" name="start-x" class="easyui-textbox col-md-12 col-xs-12"
+                    data-options="required:true,validType:'length[1,13]'"
+                    style="height: 30px; width: 100%"/>
+         </div>
+
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">结束X坐标</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="textCss_end-x" name="end-x" class="easyui-textbox col-md-12 col-xs-12"
+                    data-options="required:true,validType:'length[1,40]'"
+                    style="height: 30px; width: 100%"/>
+         </div>
+    </div>
+    <div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">起始Y坐标</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="textCss_start-y" name="start-y" class="easyui-textbox col-md-12 col-xs-12"
+                    data-options="required:true,validType:'length[1,13]'"
+                    style="height: 30px; width: 100%"/>
+         </div>
+
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">结束Y坐标</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="textCss_end-y" name="end-y" class="easyui-textbox col-md-12 col-xs-12"
+                    data-options="required:true,validType:'length[1,40]'"
+                    style="height: 30px; width: 100%"/>
+         </div>
+    </div>
+    <div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">前景色</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+<!--              <input id="textCss_color" name="color" class="easyui-textbox col-md-12 col-xs-12" -->
+<!--                     data-options="required:true,validType:'length[1,13]'" -->
+<!--                     style="height: 30px; width: 100%"/> -->
+<!-- 			<input id="textCsCs_color" class="jscolor {onFineChange:'updateColor(this)'}" /> -->
+<!-- 			<input id="textCss_color" class="jscolor" style="height: 30px;" /> -->
+				<input id="textCss_color" class="typeColor" type="color" style="height: 30px;"/>
+         </div>
+
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">背景色</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+<!--              <input id="textCss_background-color" name="background-color" class="easyui-textbox col-md-12 col-xs-12" -->
+<!--                     data-options="required:true,validType:'length[1,40]'" -->
+<!--                     style="height: 30px; width: 100%"/> -->
+<!-- 			<input id="textCss_background-color" class="jscolor" style="height: 30px;"/> -->
+				<input id="textCss_background-color" class="typeColor" type="color" style="height: 30px;"/>
+         </div>
+    </div>
+    <div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">背景图片</label>
+         </div>
+         <div class="col-md-8 col-xs-8">
+           		<input id="textCss_background-image" name="background-image" class="easyui-textbox col-md-12 col-xs-12"
+                    data-options="required:true,editable:false"
+                    style="height: 30px; width: 100%"/>
+         </div>
+         <div class="col-md-2 col-xs-2">
+         	<a id="textCss_upload" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="iconCls:''"
+            		 style="width:65px;height:24px; margin-top: 3px; margin-left: 5px;">上传</a>
+         </div>
+    </div>
+	<fieldset class="subTitle">
+        <legend>文本区域样式</legend>
+    </fieldset>
+	<div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">字体尺寸</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="textCss_font-size" name="font-size" class="easyui-combobox col-md-12 col-xs-12"
+                    data-options="required:true, editable: false"
+                    style="height: 30px; width: 100%"/>
+         </div>
+
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">字体风格</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="textCss_font-style" name="font-style" class="easyui-combobox col-md-12 col-xs-12"
+                    data-options="required:true, editable: false"
+                    style="height: 30px; width: 100%"/>
+         </div>
+    </div>
+    <div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">字体粗细</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="textCss_font-weight" name="font-weight" class="easyui-combobox col-md-12 col-xs-12"
+                    data-options="required:true, editable: false"
+                    style="height: 30px; width: 100%"/>
+         </div>
+
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">字体颜色</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+<!--              <input id="textCss_font-color" name="font-color" class="easyui-textbox col-md-12 col-xs-12" -->
+<!--                     data-options="required:true,validType:'length[1,40]'" -->
+<!--                     style="height: 30px; width: 100%"/> -->
+<!-- 			<input id="textCss_font-color" class="jscolor" style="height: 30px;" /> -->
+			<input id="textCss_font-color" class="typeColor" type="color" style="height: 30px;"/>
+         </div>
+    </div>
+    <div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">显示方式</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="textCss_show-style" name="show-style" class="easyui-combobox col-md-12 col-xs-12"
+                    data-options="required:true, editable: false"
+                    style="height: 30px; width: 100%"/>
+         </div>
+
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">移动速度</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="textCss_move-speed" name="move-speed" class="easyui-combobox col-md-12 col-xs-12"
+                    data-options="required:true, editable: false"
+                    style="height: 30px; width: 100%"/>
+         </div>
+    </div>
+    <div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">显示时长</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="textCss_show-time" name="show-time" class="easyui-textbox col-md-12 col-xs-12"
+                    data-options="required:true"
+                    style="height: 30px; width: 100%"/>
+         </div>
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">是否语音报读</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="textCss_sound-flag" name="sound-flag" class="easyui-combobox col-md-12 col-xs-12"
+                    data-options="required:true, editable: false"
+                    style="height: 30px; width: 100%"/>
+         </div>
+    </div>
+    <div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">报读音量大小</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="textCss_sound-volume" name="sound-volume" class="easyui-combobox col-md-12 col-xs-12"
+                    data-options="required:true, editable: false"
+                    style="height: 30px; width: 100%"/>
+         </div>
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">报读速度</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="textCss_sound-speed" name="sound-speed" class="easyui-combobox col-md-12 col-xs-12"
+                    data-options="required:true, editable: false"
+                    style="height: 30px; width: 100%"/>
+         </div>
+    </div>
+    <div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">报读次数</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="textCss_sound-count" name="sound-count" class="easyui-combobox col-md-12 col-xs-12"
+                    data-options="required:true, editable: false"
+                    style="height: 30px; width: 100%"/>
+         </div>
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">重复次数</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="textCss_replay-count" name="replay-count" class="easyui-combobox col-md-12 col-xs-12"
+                    data-options="required:true, editable: false"
+                    style="height: 30px; width: 100%"/>
+         </div>
+    </div>
+    <div class="row clearfix">
+         <div class="col-md-2 col-xs-2 no-pad hei-3">
+             <label class="ri-center">定时显示表达式</label>
+         </div>
+         <div class="col-md-4 col-xs-4">
+             <input id="textCss_cron" name="cron" class="easyui-textbox col-md-12 col-xs-12"
+                    data-options="required:true,validType:'length[1,20]'"
+                    style="height: 30px; width: 100%"/>
+         </div>
+    </div>
+    </form>
+    <fieldset class="subTitle">
+        <legend>公告区域设置</legend>
+    </fieldset>
+		<div id="textCss_sz_div" style="height: 100px; display: none;">
+			<a id="textCss_sz_add_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="iconCls:'icon-zd-add',toggle:true,group:'g1'"
+	            		 style="width:80px;height:24px; margin-bottom: 10px; margin-left: 55px;">添加文本</a>
+	        <table class="tableClass" id="textCss_sz_table" style="width: 95%; height: 90%; margin-left: 20px;text-align: center;">
+	        </table>
+		</div>
+    <!-- 以上代码无效，在功能中没有使用  -->
+	<div class="row clearfix">
+		<script id="editor" type="text/plain" style="width: 99%; height: 210px; margin: 20px;">
+		</script>
+    </div>
+</div>

@@ -1,0 +1,751 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <link href="frontend/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="frontend/css/easyui.css" rel="stylesheet" type="text/css"/>
+    <link href="frontend/css/main.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="frontend/js/jquery.min.js"></script>
+	<script type="text/javascript" src="frontend/js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="frontend/js/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="frontend/js/datagrid-detailview.js"></script>
+    <title>电子站牌后台系统</title>
+    <meta http-equiv="Pragma" content="no-cache"></meta>
+    <meta http-equiv="Cache-Control" content="no-cache"></meta>
+    <meta http-equiv="Expires" content="0"></meta>
+    <style type="text/css">
+    	td[field="_expander"]{
+    		display: none;
+    	}
+    	.datagrid-header-expander{
+    		display: none;
+    	}
+    </style>
+</head>
+<body>
+<!-- 引入加载loading文件 -->
+<div th:replace="loading :: loading" ></div>
+
+<div id="main">
+    <div class="zd-nav">当前位置：电子站牌后台系统&nbsp;&nbsp;&gt;&nbsp;&nbsp;电子站牌增加<p class="zd-nav-right"><a href="javascript:;" class="btn-searchDetail">收起搜索<span></span></a></p></div>
+
+    <div class="zd-box">
+    	<!-- 搜索条件 -->
+        <div class="panel-controller">
+            <div class="row clearfix">
+                <div class="col-md-1 col-xs-1 no-pad hei-3">
+                    <label class="ri-center">站牌名称</label>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                    <input id="search_ledmc" class="easyui-textbox" data-options="" style="width:100%;height:24px"/>
+                </div>
+                <div class="col-md-1 col-xs-1 no-pad hei-3">
+                    <label class="ri-center">站牌编号</label>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                    <input id="search_ledbh" class="easyui-textbox" data-options="prompt:''" style="width:100%;height:24px"/>
+                </div>
+                <!-- <div class="col-md-1 col-xs-1 no-pad hei-3">
+                    <label class="ri-center">线路</label>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                   <input id="search_xl" class="easyui-combobox" data-options="prompt:'',editable:true,mode:'remote'" style="width:100%;height:24px"/>
+                </div>
+            </div>
+             <div class="row clearfix">
+                <div class="col-md-1 col-xs-1 no-pad hei-3">
+                    <label class="ri-center">站点</label>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                    <input id="search_zd" class="easyui-combobox" data-options="prompt:'',editable:false" style="width:100%;height:24px"/>
+                </div>
+                <div class="col-md-1 col-xs-1 no-pad hei-3" >
+                    <label class="ri-center">在线状态</label>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                     <input id="search_zxzt" class="easyui-combobox" data-options="prompt:'',editable:false" style="width:100%;height:24px"/>
+                </div>
+                <div class="col-md-1 col-xs-1 no-pad hei-3" style="display:none;">
+                    <label class="ri-center">设备状态</label>
+                </div>
+                <div class="col-md-2 col-xs-2" style="display:none;">
+                   <input id="search_sbzt" class="easyui-combobox" data-options="prompt:'',editable:false" style="width:100%;height:24px"/>
+                </div> -->
+            </div>
+        </div>
+        <!-- 功能栏 -->
+        <div class="zd-controller">
+            <div class="zd-controller-left">
+                <a id="search_btn" href="javascript:;" class="easyui-linkbutton zd-btn-search" data-options="iconCls:'icon-zd-search',toggle:true,group:'g1'" style="width:65px;height:24px;">查询</a>
+            </div>
+            <div class="zd-controller-right">
+                <a id="add_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="iconCls:'icon-zd-add',toggle:true,group:'g1'" style="width:65px;height:24px;">新建</a>
+                <!--  <a id="update_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="iconCls:'icon-zd-edit',toggle:true,group:'g1'" style="width:65px;height:24px;">修改</a>
+                <a id="del_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="iconCls:'icon-zd-del',toggle:true,group:'g1'" style="width:65px;height:24px;">删除</a>
+                 <a id="look_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="iconCls:'icon-zd-show',toggle:true,group:'g1'" style="width:65px;height:24px;">查看</a>
+                <a id="import_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="toggle:true,group:'g1'" style="width:65px;height:24px;">导入</a>
+                <a id="mobanxiazai" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="toggle:true,group:'g1'" style="width:65px;height:24px;">模版下载</a>
+                <a id="search_param_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="toggle:true,group:'g1'" style="width:65px;height:24px;">查询参数</a>
+                <a id="some_param_set_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="toggle:true,group:'g1'" style="width:85px;height:24px;">部分参数设置</a>
+                <a id="all_param_set_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="toggle:true,group:'g1'" style="width:85px;height:24px;">全部参数设置</a> -->
+            </div>
+        </div>
+        <!-- 站牌列表 -->
+        <table id="datagrid" class="easyui-datagrid" style="width:100%;"
+               data-options="singleSelect:false,collapsible:true,pagination:true,rownumbers:true,pageSize:50,nowrap:false,fitColumns:true">
+            <thead>
+            <tr>
+                <th data-options="field:'ck',checkbox:true"></th>
+                <th data-options="field:'ledmc'" style="width:11%">站牌名称</th>
+                <th data-options="field:'ledbh'"  style="width:11%">站牌编号</th>
+                <th data-options="field:'ledfx'" style="width:5%">方向</th>
+                <th data-options="field:'qyzt', formatter: function(value, row, index) {
+		                	if (value == 0){
+								return '禁用';
+							} else if (value == 1) {
+								return '启用';
+							} else {
+								return '无效状态';
+							}
+		                }" style="width:6%">启用状态</th>
+                <th data-options="field:'ledmbmc'" style="width:12%">分区模版名称</th>
+                <!-- <th data-options="field:'zdsm', formatter: zdsmFormatterFun" style="width:11%">站点数目</th>
+                <th data-options="field:'zxzt'" style="width:11%">在线状态</th>
+                <th data-options="field:'sbzt', formatter: sbztFormatterFun, hidden:true" style="width:11%">设备状态</th>
+                <th data-options="field:'jd'" style="width:16%">经度</th>
+                <th data-options="field:'wd'" style="width:17%">纬度</th> -->
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<!-- 站牌增加 -->
+<div id="add_dialog" class="easyui-dialog" closed="true" modal="true" title="电子站牌配置" style="width: 900px; height: 300px; top: 90px;"
+     data-options="closable:true">
+    <div class="showPanel-body">
+        <form method="post" id="add_form">
+            <div class="xl-nav">当前位置：电子站牌后台系统&nbsp;&nbsp;&gt;&nbsp;&nbsp;电子站牌维护&nbsp;&nbsp;&gt;&nbsp;&nbsp;电子站牌配置</div>
+            <div style="display: none">
+            	<input id="add_ledid" name="ledid" class="easyui-textbox"/>
+            </div>
+            <div class="showPanel-content" style="height: 430px">
+	            <fieldset class="subTitle">
+	                <legend>站牌信息</legend>
+	            </fieldset>
+                <div class="row clearfix">
+                	
+                    <div class="col-md-2 col-xs-2 no-pad hei-3" id="zpmc">
+                        <label class="ri-center">站牌名称</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4" id="zpmcz">
+                        <input id="add_ledmc" name="ledmc" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="required:false,validType:'length[1,13]'"
+                               style="height: 30px; width: 100%" />
+                    </div>
+                    
+                    
+                     <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">挂式立式</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+	                    <select id="guali" name="guali" class="easyui-combobox" style="width: 60px; height: 30px;"
+								 	data-options="editable: false">
+									<option value="22">挂式</option>
+									<option value="11">立式</option>
+						</select>
+					</div>
+                    
+                   
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">站牌编号</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_ledbh" name="ledbh" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="required:true,validType:'length[4,4]'"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <div class="showPanel-footer">
+	                <a href="javascript:;" id="add_save_btu" class="easyui-linkbutton l-btn l-btn-small" style="width:112px; height:34px;"
+	                   data-options="toggle:true" group="g1">保存</a>
+            	</div>
+                
+                 <div id="jw" class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">经度</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_jd" name="jd" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="required:true,validType:'length[1,13]'"
+                               style="height: 30px; width: 100%" />
+                    </div>
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">纬度</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_wd" name="wd" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="required:true,validType:'length[1,13]'"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                 <div id="fxzt" class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">方向</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_ledfx" name="ledfx" class="easyui-combobox col-md-12 col-xs-12"
+                               data-options="required:true,editable:false"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">启用状态</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_qyzt" name="qyzt" class="easyui-combobox col-md-12 col-xs-12"
+                               data-options="required:true,editable:false"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                
+               <!--  <fieldset class="subTitle">
+	                <legend>参数设置</legend>
+	            </fieldset> -->
+	            <div id="cssz" class="row clearfix">
+                    <div id="csmbdiv" class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">参数模版</label>
+                    </div>
+                    <div id="csmbiddiv" class="col-md-4 col-xs-4">
+                        <input id="add_csmbid" name="csmbid" class="easyui-combobox col-md-12 col-xs-12"
+                               data-options="required:true,editable:false"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">网关</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_wg" name="wg" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="required:true,validType:['length[1,30]', 'checkIp']"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                <div id="ipziym" class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">本地设备IP地址</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_bdsbipdz" name="bdsbipdz" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="required:true,validType:['length[1,30]', 'checkIp']"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">子网掩码</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_zwym" name="zwym" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="required:true,validType:['length[1,30]', 'checkIp']"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                <!-- <fieldset class="subTitle">
+	                <legend>分区设置</legend>
+	            </fieldset> -->
+                <div id="fqmb" class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">分区模版</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_fqmbid" name="fqmbid" class="easyui-combobox col-md-12 col-xs-12"
+                               data-options="required:true,editable:false"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                <!-- <div class="row clearfix" style="height: 320px">
+	            	<a id="add_fqqysz_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="iconCls:'icon-zd-add',toggle:true,group:'g1'"
+	            		 style="width:65px;height:24px; margin-bottom: 10px; margin-left: 55px;">新增</a>
+	            	<table id="add_fqqy_datagrid" class="easyui-datagrid" style="width:100%;height: 90%"
+		               data-options="singleSelect:true,pagination:false,rownumbers:true">
+		            <thead>
+		            <tr>
+		                <th data-options="field:'xlmc'" style="width:12%">线路名称</th>
+		                <th data-options="field:'xlbh'"  style="width:10%">线路编号</th>
+		                <th data-options="field:'fx', formatter: function(value, row, index) {
+		                	if (value == 0){
+								return '上行';
+							} else if (value == 1) {
+								return '下行';
+							} else {
+							    return '';
+							}
+		                }" style="width:5%">方向</th>
+		                <th data-options="field:'zdmc'"  style="width:20%">站点名称</th>
+		                <th data-options="field:'zdbh'" style="width:10%">站点编号</th>
+		                <th data-options="field:'dqzx'" style="width:9%">当前站序</th>
+		                <th data-options="field:'zpxssx'" style="width:12%">站牌显示站序</th>
+		                <th data-options="field:'zdtk', formatter: function(value, row, index) {
+		                	if (value == 0){
+								return '停靠';
+							} else if (value == 1) {
+								return '越站';
+							}
+		                }" style="width:7%">站点停靠</th>
+		                <th data-options="field:'qyzd', formatter: function(value, row, index) {
+		                	if (value == 0){
+								return '禁用';
+							} else if (value == 1) {
+								return '启用';
+							}
+		                }" style="width:7%">站点启用</th>
+		                <th data-options="field:'aaa', formatter: formatterOperation" style="width:10%">操作</th>
+		            </tr>
+		            </thead>
+		        </table>
+	            </div> -->
+            </div>
+            
+            
+        </form>
+    </div>
+</div>
+
+<!-- 站点设置div -->
+<div id="add_zdsz_dialog" class="easyui-dialog" closed="true" modal="true" title="站点设置" style="width: 900px; height: 550px; top: 90px;">
+    <div class="showPanel-body">
+        <div class="xl-nav">当前位置：电子站牌后台系统&nbsp;&nbsp;&gt;&nbsp;&nbsp;电子站牌维护&nbsp;&nbsp;&gt;&nbsp;&nbsp;站点设置</div>
+        <div class="showPanel-content" style="height: 430px">
+        	<form method="post" id="textCss_yssz_form">
+	           	<div id="textCss_yssz_div" style="display: block">
+	           		<div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">线路名称</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="change_lpmc" name="xlmc" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="required:true,editable: true,mode:'remote'"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">线路编号</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="change_xlmc" name="xlbh" class="easyui-textbox col-md-12 col-xs-12"
+				                    data-options="required:true,editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+				    <div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">方向</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="fx" name="fx" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="required:true,editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">站点名称</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="change_zdmc" name="zdmc" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="required:true,editable: true,mode:'remote'"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+				    <div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">站点编号</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="change_zdbh" name="zdbh" class="easyui-textbox col-md-12 col-xs-12"
+				                    data-options="required:true,editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">当前站序</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="change_dqzx" name="dqzx" class="easyui-textbox col-md-12 col-xs-12"
+				                    data-options="required:true,editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+				    <div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">站牌显示站序</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="change_zpxssx" name="zpxssx" class="easyui-textbox col-md-12 col-xs-12"
+				                    data-options="required:true"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">站点停靠</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="change_zdtk" name="zdtk" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="required:true,editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+				      <div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">站点启用</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				            <input id="change_qyzd" name="qyzd" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="required:true,editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+			         </div>
+	           	</div>
+           	</form>
+        </div>
+        
+        <div class="showPanel-footer">
+            <a href="javascript:;" id="add_zdsz_save_btu" class="easyui-linkbutton l-btn l-btn-small" style="width:112px; height:34px;"
+               data-options="toggle:true" group="g1">保存</a>
+        </div>
+    </div>
+</div>
+
+<!-- 电子站牌参数信息 -->
+<div id="ledpara_dialog" class="easyui-dialog" closed="true" modal="true" title="参数信息" style="width: 900px; height: 550px; top: 90px;"
+     data-options="closable:true">
+    <div class="showPanel-body">
+        <form method="post" id="ledpara_form">
+            <div class="xl-nav">当前位置：电子站牌后台系统&nbsp;&nbsp;&gt;&nbsp;&nbsp;电子站牌维护&nbsp;&nbsp;&gt;&nbsp;&nbsp;参数信息</div>
+            <div class="showPanel-content" style="height: 430px">
+                
+                <fieldset class="subTitle">
+	                <legend>主机网络参数</legend>
+	            </fieldset>
+	            <div class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">TCP远程服务器IP地址</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_tcpip" name="tcpip" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="readonly:true"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">远程TCP服务端口</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_tcpport" name="tcpport" class="easyui-numberbox col-md-12 col-xs-12"
+                               data-options="readonly:true"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                <fieldset class="subTitle">
+	                <legend>用户控制参数</legend>
+	            </fieldset>
+                <div class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">设备有效时间</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_sbyxsjks" name="sbyxsjks" class="easyui-datebox col-md-12 col-xs-12"
+                               data-options="readonly:true"
+                               style="height: 30px; width: 45%"/>&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+                        <input id="add_sbyxsjjs" name="sbyxsjjs" class="easyui-datebox col-md-12 col-xs-12"
+                               data-options="readonly:true"
+                               style="height: 30px; width: 45%"/>
+                    </div>
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">每天循环时间段</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_mtxhsjd1" name="mtxhsjd1" class="easyui-timespinner col-md-12 col-xs-12"
+                               data-options="readonly:true"
+                               style="height: 30px; width: 45%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input id="add_mtxhsjd2" name="mtxhsjd2" class="easyui-timespinner col-md-12 col-xs-12"
+                               data-options="readonly:true"
+                               style="height: 30px; width: 45%"/>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">设备温度范围</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_sbwkfw" name="sbwkfw" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="readonly:true"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">外部风扇</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_wbfs" name="wbfs" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="readonly:true"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">横流风扇</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_hlfs" name="hlfs" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="readonly:true"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">加温模块</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_jwmk" name="jwmk" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="readonly:true"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">控制模式</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_kzms" name="kzms" class="easyui-combobox col-md-12 col-xs-12 testCombo"
+                               data-options="readonly:true"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">断网复位</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_dwfw" name="dwfw" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="readonly:true"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">设备过流保护</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_sbglbh" name="sbglbh" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="readonly:true"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">设备水浸保护</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_sbsjbh" name="sbsjbh" class="easyui-combobox col-md-12 col-xs-12"
+                               data-options="readonly:true"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">设备复位重启</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_sbfwcq" name="sbfwcq" class="easyui-combobox col-md-12 col-xs-12"
+                               data-options="readonly:true"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- 参数下发模版 -->
+<div id="save_ledpara_dialog" class="easyui-dialog" closed="true" modal="true" title="参数下发" style="width: 900px; height: 550px; top: 90px;"
+     data-options="closable:true">
+    <div class="showPanel-body">
+        <form method="post" id="save_ledpara_form">
+            <div class="xl-nav">当前位置：电子站牌后台系统&nbsp;&nbsp;&gt;&nbsp;&nbsp;参数设置&nbsp;&nbsp;&gt;&nbsp;&nbsp;参数下发</div>
+            <div class="showPanel-content" style="height: 430px">
+	            <fieldset class="subTitle" id="csmb_subtitle">
+	                <legend>模版选择</legend>
+	            </fieldset>
+                <div class="row clearfix" id="csmb_row_clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">参数模版</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="edit_csmb" name="editcsmb" class="easyui-combobox col-md-12 col-xs-12"
+                               data-options="required:true,validType:'length[1,13]'"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+					<a id="read_csmb_btn" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="toggle:true,group:'g1'"
+	            		 style="width:65px;height:24px; margin-bottom: 10px; margin-left: 55px;">读取模版</a>
+                </div>
+                
+                <fieldset class="subTitle">
+	                <legend>主机网络参数</legend>
+	            </fieldset>
+	            <div class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">TCP远程服务器IP地址</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="edit_tcpip" name="edittcpip" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="required:true,validType:['length[1,30]', 'checkIp']"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">远程TCP服务端口</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="edit_tcpport" name="edittcpport" class="easyui-numberbox col-md-12 col-xs-12"
+                               data-options="required:true,min:1, max:65535"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                <fieldset class="subTitle">
+	                <legend>用户控制参数</legend>
+	            </fieldset>
+                <div class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">设备有效时间</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="edit_sbyxsjks" name="editsbyxsjks" class="easyui-datebox col-md-12 col-xs-12"
+                               data-options="required:true, editable:false"
+                               style="height: 30px; width: 45%"/>&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+                        <input id="edit_sbyxsjjs" name="editsbyxsjjs" class="easyui-datebox col-md-12 col-xs-12"
+                               data-options="required:true,editable:false"
+                               style="height: 30px; width: 45%"/>
+                    </div>
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">每天循环时间段</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="edit_mtxhsjd1" name="editmtxhsjd1" class="easyui-timespinner col-md-12 col-xs-12"
+                               data-options="required:true,validType:'length[1,30]'"
+                               style="height: 30px; width: 45%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input id="edit_mtxhsjd2" name="editmtxhsjd2" class="easyui-timespinner col-md-12 col-xs-12"
+                               data-options="required:true,validType:'length[1,30]'"
+                               style="height: 30px; width: 45%"/>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">设备温度范围</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="edit_sbwkfw" name="editsbwkfw" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="required:true,validType:'length[1,30]'"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">外部风扇</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="edit_wbfs" name="editwbfs" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="required:true,validType:'length[1,30]'"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">横流风扇</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="edit_hlfs" name="edithlfs" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="required:true,validType:'length[1,30]'"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">加温模块</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="edit_jwmk" name="editjwmk" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="required:true,validType:'length[1,30]'"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">控制模式</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="edit_kzms" name="editkzms" class="easyui-combobox col-md-12 col-xs-12 testCombo"
+                               data-options="required:true,editable:false"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">断网复位</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="edit_dwfw" name="editdwfw" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="required:true,validType:'length[1,30]'"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">设备过流保护</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="edit_sbglbh" name="editsbglbh" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="required:true,validType:'length[1,30]'"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">设备水浸保护</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="edit_sbsjbh" name="editsbsjbh" class="easyui-combobox col-md-12 col-xs-12"
+                               data-options="required:true,editable:false"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">设备复位重启</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="edit_sbfwcq" name="editsbfwcq" class="easyui-combobox col-md-12 col-xs-12"
+                               data-options="required:true,editable:false"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="showPanel-footer">
+                <a href="javascript:;" id="add_save_ledpara" class="easyui-linkbutton l-btn l-btn-small" style="width:100px; height:34px;"
+                   data-options="toggle:true" group="g1">保存</a>
+                   <a href="javascript:;" id="add_save_send_ledpara" class="easyui-linkbutton l-btn l-btn-small" style="width:100px; height:34px;"
+                   data-options="toggle:true" group="g1">保存并下发</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- 导入电子站牌列表 -->
+	<!-- <div id="reportDialog" class="easyui-dialog" title="报送文件上传" style="width:500px;height:100px;" data-options="closable:true,modal:true,closed:true">
+			<input class="easyui-filebox" id="upfile" data-options="prompt: '请选择.xls文件',buttonText:'选择文件'" name="upfile" style="width:60%;height:34px"/>
+		<a id="reportUploadButton" class="easyui-linkbutton" style="width:80px; height:34px;" data-options="toggle:true,group:'g1'">上传</a>
+	</div> -->
+
+
+</body>
+<script type="text/javascript" src="frontend/js/common.js"></script>
+<script type="text/javascript" src="frontend/project/js/ledCommon.js"></script>
+<script type="text/javascript" src="frontend/project/js/ledlistaddmy.js"></script>
+</html>

@@ -1,0 +1,1 @@
+package com.framework.webClient.service;import org.springframework.stereotype.Service;/** * @author 吉庆 * @date Wed Aug 29 00:00:00 CST 2018 */@Servicepublic class LedStationManageServiceImpl implements ILedStationManageService {}

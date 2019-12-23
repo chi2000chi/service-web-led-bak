@@ -1,0 +1,1 @@
+package com.framework.webClient.service;/** * @author 吉庆 * @date Mon Sep 03 00:00:00 CST 2018 */import java.util.List;import java.util.Map;public interface ILedStateManageService {	/**	 * 	 * 查询电子站牌状态信息	 * @param paramMap	 * @return	 */	public List<Map<String, Object>> selectLedStateInfo(Map<String, Object> paramMap);	}

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <link href="frontend/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="frontend/css/easyui.css" rel="stylesheet" type="text/css"/>
+    <link href="frontend/css/main.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="frontend/js/jquery.min.js"></script>
+	<script type="text/javascript" src="frontend/js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="frontend/js/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="frontend/js/jscolor.js"></script>
+	<script type="text/javascript" charset="utf-8" src="frontend/js/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="frontend/js/ueditor.all.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="frontend/js/lang/zh-cn/zh-cn.js"></script>
+    <title>电子站牌后台系统</title>
+    <meta http-equiv="Pragma" content="no-cache"></meta>
+    <meta http-equiv="Cache-Control" content="no-cache"></meta>
+    <meta http-equiv="Expires" content="0"></meta>
+    <style type="text/css">
+    	.tableClass tr{
+    		height: 70px
+    	}
+    	.tableClass tr td{
+    		border:1px solid #dbe1e7
+    	}
+    	textarea {
+    		resize: none;
+    		width: 97%; 
+    		height: 97%; 
+    		margin-top: 5px; 
+    		border: none; 
+    		outline: none
+    	}
+    	.inputClass {
+    		height:97%; 
+    		width:97%;
+    		border: 0px;
+    		outline:none;
+/*     		margin-left: 20px; */
+    	}
+    </style>
+</head>
+<body>
+<!-- 引入加载loading文件 -->
+<div th:replace="loading :: loading" ></div>
+<div id="main">
+    <div class="zd-nav">当前位置：电子站牌后台系统&nbsp;&nbsp;&gt;&nbsp;&nbsp;信息发布<p class="zd-nav-right"><a href="javascript:;" class="btn-searchDetail">收起搜索<span></span></a></p></div>
+
+    <div class="zd-box">
+        <div class="panel-controller">
+            <div class="row clearfix">
+                <div class="col-md-1 col-xs-1 no-pad hei-3">
+                    <label class="ri-center">公告名称</label>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                    <input id="search_ggmc" class="easyui-textbox" data-options="" style="width:100%;height:24px"/>
+                </div>
+                <div class="col-md-1 col-xs-1 no-pad hei-3">
+                    <label class="ri-center">发布时间</label>
+                </div>
+                <div class="col-md-4 col-xs-4">
+                    <input id="search_fbsj" name="fbsj" class="easyui-datebox col-md-12 col-xs-12"
+                               data-options=""
+                               style="height: 30px; width: 45%"/>&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+                        <input id="search_jzsj" name="jzsj" class="easyui-datebox col-md-12 col-xs-12"
+                               data-options=""
+                               style="height: 30px; width: 45%"/>
+                </div>
+            </div>
+           
+        </div>
+        <div class="zd-controller">
+            <div class="zd-controller-left">
+                <a id="search_btn" href="javascript:;" class="easyui-linkbutton zd-btn-search" data-options="iconCls:'icon-zd-search',toggle:true,group:'g1'" style="width:65px;height:24px;">查询</a>
+            </div>
+            <div class="zd-controller-right">
+                <a id="add_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="iconCls:'icon-zd-add',toggle:true,group:'g1'" style="width:65px;height:24px;">新建</a>
+                <a id="update_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="iconCls:'icon-zd-edit',toggle:true,group:'g1'" style="width:65px;height:24px;">修改</a>
+                <a id="del_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="iconCls:'icon-zd-del',toggle:true,group:'g1'" style="width:65px;height:24px;">删除</a>
+                <a id="xfzp_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="toggle:true,group:'g1'" style="width:65px;height:24px;">下发站牌</a>
+                <a id="fbzp_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="toggle:true,group:'g1'" style="width:65px;height:24px;">发布</a>
+            </div>
+        </div>
+        <table id="datagrid" class="easyui-datagrid" style="width:100%;"
+               data-options="singleSelect:false,collapsible:true,pagination:true,rownumbers:true,pageSize:50,fitColumns:true">
+            <thead>
+            <tr>
+                <th data-options="field:'ck',checkbox:true"></th>
+                <th data-options="field:'ggmc'" style="width:34%">公告名称</th>
+                <th data-options="field:'jzsj'"  style="width:33%">截止时间</th>
+                <th data-options="field:'fbsj'" style="width:33%">发布时间</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<!-- 新建/修改dialog -->
+<div id="add_dialog" class="easyui-dialog" closed="true" modal="true" title="分区模板配置" style="width: 900px; height: 550px; top: 90px;"
+     data-options="closable:true">
+    <div class="showPanel-body">
+        <form method="post" id="add_form">
+            <div class="xl-nav">当前位置：电子站牌后台系统&nbsp;&nbsp;&gt;&nbsp;&nbsp;分区模板&nbsp;&nbsp;&gt;&nbsp;&nbsp;分区模板配置</div>
+            <div style="display: none">
+            	<input id="add_mbid" name="mbid" class="easyui-textbox"/>
+            	<input id="add_mblj" name="mblj" class="easyui-textbox"/>
+            </div>
+            <div class="showPanel-content" style="height: 430px">
+	            <fieldset class="subTitle">
+	                <legend>公告设置</legend>
+	            </fieldset>
+                <div class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">公告名称</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_ggmc" name="ggmc" class="easyui-textbox col-md-12 col-xs-12"
+                               data-options="required:true,validType:'length[1,13]'"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">发布时间</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_fbsj" name="fbsj" class="easyui-datetimebox col-md-12 col-xs-12"
+                               data-options="required:true,editable:false"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+
+                    <div class="col-md-2 col-xs-2 no-pad hei-3">
+                        <label class="ri-center">截止时间</label>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <input id="add_jzsj" name="jzsj" class="easyui-datetimebox col-md-12 col-xs-12"
+                               data-options="required:true,editable:false"
+                               style="height: 30px; width: 100%"/>
+                    </div>
+                </div>
+                
+                <fieldset class="subTitle">
+	                <legend>分区设置</legend>
+	            </fieldset>
+	            <div class="row clearfix" style="height: 320px">
+	            	<a id="add_fqqysz_btu" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="iconCls:'icon-zd-add',toggle:true,group:'g1'"
+	            		 style="width:65px;height:24px; margin-bottom: 10px; margin-left: 55px;">新增</a> <b>注意：每种分区类型最多允许设置一条</b>
+	            	<table id="add_fqqy_datagrid" class="easyui-datagrid" style="width:100%;height: 90%"
+		               data-options="singleSelect:true,pagination:false,rownumbers:true, onDblClickRow: dblClickFun">
+		            <thead>
+		            <tr>
+		                <th data-options="field:'fqlx', formatter:formatterFqlx, editor:{
+							type:'combobox',
+							options:{
+								valueField:'zdbm',
+								textField:'zdmc',
+								url:'/selectLedSjzdByPzdbm?pzdbm=4',
+								required:true,
+								editable: false,
+								onLoadSuccess: function(data){
+									if(!$(this).combobox('getValue')){
+										$(this).combobox('setValue', data[0].zdbm);
+									}
+								}
+							}
+						}" style="width:50%">分区类型</th>
+<!-- 		                <th data-options="field:'start-x'"  style="width:15%">起始X坐标</th> -->
+<!-- 		                <th data-options="field:'end-x'" style="width:15%">结束X坐标</th> -->
+<!-- 		                <th data-options="field:'start-y'"  style="width:15%">起始Y坐标</th> -->
+<!-- 		                <th data-options="field:'end-y'" style="width:15%">结束Y坐标</th> -->
+		                <th data-options="field:'aaa', formatter: formatterOperation" style="width:50%">操作</th>
+		            </tr>
+		            </thead>
+		        </table>
+	            </div>
+            </div>
+            
+            <div class="showPanel-footer">
+                <a href="javascript:;" id="add_save_btu" class="easyui-linkbutton l-btn l-btn-small" style="width:112px; height:34px;"
+                   data-options="toggle:true" group="g1">保存</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- 区域信息设置div -->
+<div id="add_qysz_dialog" class="easyui-dialog" closed="true" modal="true" title="设置样式" style="width: 900px; height: 550px; top: 90px;">
+    <div class="showPanel-body">
+        <div class="xl-nav">当前位置：电子站牌后台系统&nbsp;&nbsp;&gt;&nbsp;&nbsp;分区模板&nbsp;&nbsp;&gt;&nbsp;&nbsp;分区模板配置&nbsp;&nbsp;&gt;&nbsp;&nbsp;分区模板配置</div>
+        <div class="showPanel-content" style="height: 430px">
+           	<div id="textCss_div" th:replace="ledtemplateTextCss :: textCss_div" style="display: block"></div>
+           	<div id="imageCss_div" th:replace="ledtemplateImageCss :: imageCss_div" style="display: block" ></div>
+           	<div id="videoCss_div" th:replace="ledtemplateVideoCss :: videoCss_div" style="display: block" ></div>
+        </div>
+        
+        <div class="showPanel-footer">
+            <a href="javascript:;" id="add_qysz_save_btu" class="easyui-linkbutton l-btn l-btn-small" style="width:112px; height:34px;"
+               data-options="toggle:true" group="g1">保存</a>
+        </div>
+    </div>
+</div>
+
+<!-- 自定义样式设置div -->
+<div id="add_yssz_dialog" class="easyui-dialog" closed="true" modal="true" title="设置样式" style="width: 900px; height: 550px; top: 90px;">
+    <div class="showPanel-body">
+        <div class="xl-nav">当前位置：电子站牌后台系统&nbsp;&nbsp;&gt;&nbsp;&nbsp;分区模板&nbsp;&nbsp;&gt;&nbsp;&nbsp;分区模板配置&nbsp;&nbsp;&gt;&nbsp;&nbsp;样式设置</div>
+        <div class="showPanel-content" style="height: 430px">
+        	<form method="post" id="textCss_yssz_form">
+	           	<div id="textCss_yssz_div" style="display: block">
+	           		<div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">字体尺寸</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="textCss_yssz_font-size" name="font-size" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">字体风格</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="textCss_yssz_font-style" name="font-style" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+				    <div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">字体粗细</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="textCss_yssz_font-weight" name="font-weight" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">字体颜色</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				<!--              <input id="textCss_font-color" name="font-color" class="easyui-textbox col-md-12 col-xs-12" -->
+				<!--                     data-options="required:true,validType:'length[1,40]'" -->
+				<!--                     style="height: 30px; width: 100%"/> -->
+							<input id="textCss_yssz_font-color" class="jscolor" style="height: 30px;" />
+				         </div>
+				    </div>
+				    <div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">显示方式</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="textCss_yssz_show-style" name="show-style" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">移动速度</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="textCss_yssz_move-speed" name="move-speed" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+				    <div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">显示时长</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="textCss_yssz_show-time" name="show-time" class="easyui-textbox col-md-12 col-xs-12"
+				                    data-options=""
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">是否语音报读</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="textCss_yssz_sound-flag" name="sound-flag" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+				    <div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">报读音量大小</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="textCss_yssz_sound-volume" name="sound-volume" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">报读速度</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="textCss_yssz_sound-speed" name="sound-speed" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+				    <div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">报读次数</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="textCss_yssz_sound-count" name="sound-count" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">重复次数</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="textCss_yssz_replay-count" name="replay-count" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+				    <div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">定时显示表达式</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="textCss_yssz_cron" name="cron" class="easyui-textbox col-md-12 col-xs-12"
+				                    data-options="validType:'length[1,20]'"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+	           	</div>
+           	</form>
+           	<form method="post" id="imageCss_yssz_form">
+           		<div id="imageCss_yssz_div" style="display: block" >
+           			<div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">显示方式</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="imageCss_yssz_show-style" name="show-style" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">移动速度</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="imageCss_yssz_move-speed" name="move-speed" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+				    <div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">显示时长</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="imageCss_yssz_show-time" name="show-time" class="easyui-textbox col-md-12 col-xs-12"
+				                    data-options=""
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">重复次数</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="imageCss_yssz_replay-count" name="replay-count" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+				    <div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">定时显示表达式</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="imageCss_yssz_cron" name="cron" class="easyui-textbox col-md-12 col-xs-12"
+				                    data-options="validType:'length[1,20]'"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+           		</div>
+           	</form>
+           	<form method="post" id="videoCss_yssz_form">
+           		<div id="videoCss_yssz_div" style="display: block" >
+	           		<div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">显示时长</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="videoCss_yssz_show-time" name="show-time" class="easyui-textbox col-md-12 col-xs-12"
+				                    data-options=""
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">是否语音报读</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="videoCss_yssz_sound-flag" name="sound-flag" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+				    <div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">报读音量大小</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="videoCss_yssz_sound-volume" name="sound-volume" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">报读速度</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="videoCss_yssz_sound-speed" name="sound-speed" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+				    <div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">定时显示表达式</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="videoCss_yssz_cron" name="cron" class="easyui-textbox col-md-12 col-xs-12"
+				                    data-options="validType:'length[1,20]'"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+           		</div>
+           	</form>
+        </div>
+        
+        <div class="showPanel-footer">
+            <a href="javascript:;" id="add_yssz_save_btu" class="easyui-linkbutton l-btn l-btn-small" style="width:112px; height:34px;"
+               data-options="toggle:true" group="g1">保存</a>
+        </div>
+    </div>
+</div>
+
+<!-- 导入背景图片，视频 -->
+<div id="reportDialog" class="easyui-dialog" title="文件上传" style="width:500px;height:100px;" data-options="closable:true,modal:true,closed:true">
+		<input class="easyui-filebox" id="upfile" data-options="prompt: '选择文件',buttonText:'选择文件'" name="upfile" style="width:60%;height:34px"/>
+	<a id="reportUploadButton" class="easyui-linkbutton" style="width:80px; height:34px;" data-options="toggle:true,group:'g1'">上传</a>
+</div>
+
+
+
+<!-- 分配站牌div -->
+<div id="xfzp_dialog" class="easyui-dialog" closed="true" modal="true" title="站点设置" style="width: 900px; height: 550px; top: 90px;">
+    <div class="showPanel-body">
+        <div class="xl-nav">当前位置：电子站牌后台系统&nbsp;&nbsp;&gt;&nbsp;&nbsp;分区模板&nbsp;&nbsp;&gt;&nbsp;&nbsp;公告发布站牌</div>
+        <div class="showPanel-content" style="height: 430px">
+        	<form method="post" id="fpzp_form">
+	           	<div id="fpzp_div" style="display: block">
+	           		<div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">站牌名称</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="fpzp_ledmc" name="ledmc" class="easyui-textbox col-md-12 col-xs-12"
+				                    data-options=""
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">站牌编号</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="fpzp_ledbh" name="ledbh" class="easyui-textbox col-md-12 col-xs-12"
+				                    data-options=""
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+				    <div class="row clearfix">
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">线路</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="fpzp_xlmc" name="xlmc" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				
+				         <div class="col-md-2 col-xs-2 no-pad hei-3">
+				             <label class="ri-center">站点</label>
+				         </div>
+				         <div class="col-md-4 col-xs-4">
+				             <input id="fpzp_zdmc" name="zdmc" class="easyui-combobox col-md-12 col-xs-12"
+				                    data-options="editable: false"
+				                    style="height: 30px; width: 100%"/>
+				         </div>
+				    </div>
+	           	</div>
+           	</form>
+           	<div class="zd-controller" style="border: 0px;">
+	            <div class="zd-controller-right">
+	                <a id="search_dzzpxx" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="toggle:true,group:'g1'" style="width:65px;height:24px;">查询</a>
+	            </div>
+            </div>
+             <fieldset class="subTitle">
+	                <legend>分配站牌列表</legend>
+	         </fieldset>
+	         <div class="row">
+				 <div class="col-md-2"></div>
+				 <div class="col-md-4">站牌列表</div>
+				 <div class="col-md-2"> </div>
+				 <div class="col-md-4">已分配站牌列表</div>
+			</div>
+			<div class="row">
+			 	<div class="col-md-2"></div>
+		        <div class="col-md-4">
+		          <select multiple="multiple" id="select1" style="width:200px;height:260px; float:left; border:1px #A0A0A4 outset; padding:4px; ">
+		          </select>
+		        </div>
+		        <div class="col-md-2" style="margin-top: 30px;"> 
+		        	<div style="height: 50px;">
+				         <a id="add" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="toggle:true,group:'g1'" style="width:65px;height:24px;">&gt;</a><br/>
+		        	</div>
+					<div style="height: 50px;">
+				         <a id="add_all" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="toggle:true,group:'g1'" style="width:65px;height:24px;">&gt;&gt;</a><br/>
+					</div>
+					<div style="height: 50px;">
+				         <a id="remove" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="toggle:true,group:'g1'" style="width:65px;height:24px;">&lt;</a><br/>
+					</div>
+					<div style="height: 50px;">
+				         <a id="remove_all" href="javascript:;" class="easyui-linkbutton zd-btn" data-options="toggle:true,group:'g1'" style="width:65px;height:24px;">&lt;&lt;</a><br/>
+					</div>
+			      </div>
+		        <div class="col-md-4">
+		          <select multiple="multiple" id="select2" style="width: 200px;height:260px; float:lfet;border:1px #A0A0A4 outset; padding:4px;">
+		          </select>
+		        </div>
+     		 </div>
+        </div>
+        
+        <div class="showPanel-footer">
+            <a href="javascript:;" id="add_zdsz_save_btu" class="easyui-linkbutton l-btn l-btn-small" style="width:112px; height:34px;"
+               data-options="toggle:true" group="g1">保存</a>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="frontend/js/common.js"></script>
+<script type="text/javascript" src="frontend/project/js/ledCommon.js"></script>
+<script type="text/javascript" src="frontend/project/js/ledtemplatetemp.js"></script>
+</body>
+</html>

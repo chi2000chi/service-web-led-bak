@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
+    <link type="text/css" href="frontend/css/easyui.css" rel="stylesheet"/>
+    <link type="text/css" href="frontend/project/css/style.css" rel="stylesheet"/>
+    <script type='text/javascript' src='frontend/js/jquery.min.js'></script>
+	<script type="text/javascript" src="frontend/js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&amp;ak=ug5V5CHdGdc1ba6uFlpG060bY4CrI084"></script>
+	<!-- 点集合所需两个js -->
+	<script type="text/javascript" src="frontend/js/TextIconOverlay_min.js"></script>
+	<script type="text/javascript" src="frontend/js/MarkerClusterer_min.js"></script>
+	<script type="text/javascript" src="frontend/js/echarts.min.js"></script>
+	<script type="text/javascript" src="frontend/js/jquery.nicescroll.min.js"></script>
+    <title>电子站牌状态监控</title>
+</head>
+<body>
+<div id="loading">
+    <div id="preview-area">
+        <ul id="spinners">
+            <li class="sk-cube-grid">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="main">
+    <div id="container"></div>
+    <header>
+        <div id="logo">电子站牌状态监控</div>
+    </header>
+    <div id="left-panel1" class="s-panel">
+        <div class="left-tit">条件查询</div>
+        <table id="left-panel1-table" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <th>线路</th>
+                <td><input id="search_xl" class="easyui-combobox" data-options="prompt:'',editable:true,mode:'remote'" style="width:100px;height:24px"/></td>
+                <td><a id="reset" class="btn-search" style="cursor:pointer">重置</a></td>
+            </tr>
+            <tr>
+                <th>站点</th>
+                <th><input id="search_zd" class="easyui-combobox" data-options="prompt:'',editable:false" style="width:100px;height:24px"></input></th>
+                <td><a id="search" class="btn-search" style="cursor:pointer">查询</a></td>
+            </tr>
+        </table>
+    </div>
+    <div id="left-panel2" class="s-panel">
+        <div class="left-tit">快捷显示</div>
+        <ul class="left-color">
+            <li>全部<span class="left-color-panel blue" style="cursor:pointer"></span></li>
+            <li>在线<span class="left-color-panel green" style="cursor:pointer"></span></li>
+            <li>离线<span class="left-color-panel black" style="cursor:pointer"></span></li>
+            <li>故障<span class="left-color-panel red" style="cursor:pointer"></span></li>
+        </ul>
+    </div>
+    <div id="left-panel3" class="s-panel">
+        <div id="left-panel3-chart"></div>
+        <ul id="left-panel3-text" class="left-txt">
+            <li><span id="left-panel3-num1">0</span>电子站牌总数</li>
+            <li><span id="left-panel3-num2">0</span>在线电子站牌数</li>
+        </ul>
+    </div>
+    <div id="left-panel4" class="s-panel">
+        <div id="left-panel4-chart"></div>
+        <ul id="left-panel4-text" class="left-txt">
+            <li><span id="left-panel4-num1">0</span>在线电子站牌数</li>
+            <li><span id="left-panel4-num2">0</span>在线故障数</li>
+        </ul>
+    </div>
+    <div id="info-panel" class="s-panel">
+        <a class="icon-close"></a>
+        <table id="right-info-table" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <th>电子站牌名称:</th>
+                <td><span id="dzzpmc"></span></td>
+            </tr>
+            <tr>
+                <th>电子站牌编号:</th>
+                <td><span id="dzzpbh"></span></td>
+            </tr>
+            <tr>
+                <th>经度:</th>
+                <td><span id="jd"></span></td>
+            </tr>
+            <tr>
+                <th>纬度:</th>
+                <td><span id="wd"></span></td>
+            </tr>
+            <tr>
+                <th>状态:</th>
+                <td><span id="zt"></span></td>
+            </tr>
+            <tr>
+                <th>故障类型:</th>
+                <td><span id="gzlx"></span></td>
+            </tr>
+        </table>
+        <div class="right-tit">关联站点</div>
+        <table id="right-site-table" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <th>序号</th>
+                <th>线路名称</th>
+                <th>站点名称</th>
+                <th>方向</th>
+            </tr>
+        </table>
+    </div>
+</div>
+<script type="text/javascript" src="frontend/project/js/ledstatemonitor.js"></script>
+</body>
+</html>
+

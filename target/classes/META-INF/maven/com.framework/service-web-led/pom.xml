@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.framework</groupId>
+	<artifactId>service-web-led</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>service-web-led</name>
+	<description>service-web-led</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.2.RELEASE</version> 
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- rabbit mq -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+       <dependency>
+           <groupId>org.springframework.boot</groupId>
+           <artifactId>spring-boot-starter-thymeleaf</artifactId>
+       </dependency> 
+		<!-- 公共commons包 -->
+		<dependency>
+			<groupId>com.framework</groupId>
+			<artifactId>service-commons</artifactId>
+			<version>2.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.framework</groupId>
+			<artifactId>service-data-forward-entity</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		  <dependency>
+	   		<groupId>com.framework</groupId>
+	   		<artifactId>service-common-thrift</artifactId>
+	   		<version>0.0.1-SNAPSHOT</version>
+	   </dependency>
+     <!-- 数据库连接池 -->  
+     <dependency>  
+         <groupId>com.alibaba</groupId>  
+         <artifactId>druid</artifactId>  
+         <version>1.0.5</version>  
+     </dependency>  
+     <!--Json Support -->  
+     <dependency>  
+         <groupId>com.alibaba</groupId>  
+         <artifactId>fastjson</artifactId>  
+         <version>1.1.43</version>  
+     </dependency>  
+ 
+	 <!--orcale数据库依赖-->
+	 <!-- <dependency>
+	     <groupId>oracle</groupId>
+	     <artifactId>ojdbc14_g</artifactId>
+	     <version>10.2.0.4</version>
+	 </dependency> -->
+	 <!-- new zhengshi -->
+	  <dependency>
+	     <groupId>oracle</groupId>
+	     <artifactId>ojdbc7</artifactId>
+	     <version>12.1.0.2</version>
+	 </dependency>
+	  <!--mybatis依赖-->
+	  <dependency>
+	   <groupId>org.mybatis.spring.boot</groupId>
+	   <artifactId>mybatis-spring-boot-starter</artifactId>
+	   <version>1.1.1</version>
+	  </dependency>
+	   <!--jdbc Support -->  
+	  <dependency>
+	   <groupId>org.springframework.boot</groupId>
+	   <artifactId>spring-boot-starter-jdbc</artifactId>
+	  </dependency>
+	   <!--junit Support -->  
+	  <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	   </dependency>
+	<!-- POI依赖 -->
+	   <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-examples</artifactId>
+            <version>3.14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-excelant</artifactId>
+            <version>3.14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-scratchpad</artifactId>
+            <version>3.14</version>
+        </dependency>
+        <!-- ftp依赖 -->
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>3.6</version>
+        </dependency>
+	   <!-- 热部署 -->
+		<dependency>  
+            <groupId>org.springframework.boot</groupId>  
+            <artifactId>spring-boot-devtools</artifactId>  
+            <optional>true</optional>  
+  		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+		
+		<dependency>
+	      <groupId>sso.client</groupId>
+	      <artifactId>commons-logging</artifactId>
+	      <version>1.1.1</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>sso.client</groupId>
+	      <artifactId>commons-httpclient</artifactId>
+	      <version>3.1</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>sso.client</groupId>
+	      <artifactId>commons-codec</artifactId>
+	      <version>1.4</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>sso.client</groupId>
+	      <artifactId>json</artifactId>
+	      <version>1.0</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>sso.client</groupId>
+	      <artifactId>ssofilter</artifactId>
+	      <version>1.1</version>
+	    </dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+                <testFailureIgnore>true</testFailureIgnore>
+            </configuration>
+        </plugin>
+		</plugins>
+	 <resources>
+            <resource>
+                <directory>src/main/java</directory> 
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+            <resource>
+				<directory>src/main/resources</directory>
+			</resource>
+        </resources>
+	</build>
+
+
+</project>
